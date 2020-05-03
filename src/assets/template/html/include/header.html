@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet"-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- @if NODE_ENV='development' -->
     <link rel="stylesheet" href="/assets/template/vendor/owlcarousel/owl.carousel.css">
     <link rel="stylesheet" href="/assets/template/vendor/owlcarousel/owl.theme.default.css">
+    <link rel="stylesheet" href="/assets/template/vendor/scroller/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
     <!-- @endif -->
 
@@ -18,221 +17,82 @@
     <!-- @endif -->
 </head>
 <body class="">
-
+<div class="fixed-header">
     <div class="topline">
         <div class="container">
-            <div class="topline__grid topline__grid--desktop">
+            <div class="topline__grid">
                 <ul class="topline-menu">
-                    <li><a href="#">Автопарк</a></li>
+                    <li><a href="#">Услуги</a></li>
                     <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Полезное</a></li>
                 </ul>
-            </div>
-            <div class="topline__grid topline__grid--mobile">
-                <div class="topline-city">
-                    <span class="topline-city__marker"></span>
-                    <a href="#">Санкт-Петербург</a>
+                <div class="topline__address">
+                    Б.Сампсониевский, д.82,офис 1  с 9:00 до 18: 00 (пн-пт)
                 </div>
-                <ul class="topline-menu">
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+                <div class="topline__email">
+                    <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
+                </div>
+                <div class="topline__phone">
+                    <a href="tel:8812999-99-99">8 (812) 999-99-99</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="fixed-header-box">
-        <div class="fixed-header">
-            <div class="header">
-                <div class="container">
-                    <div class="header__grid">
-                        <div class="header__logo">
-                            <a href="/"><img src="/assets/template/images/logo.png" alt=""></a>
+    <div class="header">
+        <div class="container phablet-container">
+            <div class="header__grid">
+                <div class="header__left phablet-container__inside">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="/assets/template/images/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="header__burger">
+                        <a href="#" class="burger">
+                            <span></span>
+                            <span class="burger__center"></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right phablet-container__inside">
+                    <div class="header__menu">
+                        <ul class="menu-top">
+                            <li><a href="#">Стиральные машины</a></li>
+                            <li><a href="#">Плиты</a></li>
+                            <li><a href="#">Холодильники</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__contacts">
+                        <div class="header-phone">8 (812) 999-99-99</div>
+                        <div class="header-worktime">с 9.00 до 18.00 (пн-пт)</div>
+                    </div>
+                    <div class="header__search">
+                        <div class="search">
+                            <form action="">
+                                <input type="text" placeholder="Введите запрос">
+                                <button>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </form>
                         </div>
-                        <div class="header__slogan">
-                            Вывоз мусора<br />
-                            в Санкт-Петербурге<br />
-                            и Ленинградской области
-                        </div>
-                        <div class="header__phones">
-                            <div class="header-phone">
-                                <a href="tel:8 (812) 920-38-54">8 (812) 920-38-54</a>
-                            </div>
-                            <div class="header-worktime">с 8.00 до 22.30</div>
-                        </div>
-                        <div class="header__emails">
-                            <div class="header-email">
-                                <a href="mailto:zakaz@hlamknam.ru">zakaz@hlamknam.ru</a>
-                            </div>
-                            <div class="header-email__hint">круглосуточно</div>
-                        </div>
-                        <div class="header__callback">
-                            <a class="btn btn-o" href="#callback" data-fancybox="">Заказать звонок</a>
-                        </div>
-                        <div class="header__burger toggle-menu">
-                            <a href="#" class="burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                    </div>
+                    <div class="header__cart">
+                        <div id="msMiniCart" class="cart-top">
+                            <a href="#">
+                                <div class="count">2</div>
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.333a.833.833 0 100-1.666.833.833 0 000 1.666zM16.667 18.333a.833.833 0 100-1.666.833.833 0 000 1.666zM.833.833h3.334L6.4 11.992a1.666 1.666 0 001.667 1.341h8.1a1.666 1.666 0 001.666-1.341L19.167 5H5"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="top-menu">
-                <div class="container">
-                    <div class="top-menu__grid">
-                        <ul class="top-nav">
-                            <li><a href="#">Вывоз мусора</a></li>
-                            <li class="has-child"><a href="#">Бесплатный вывоз</a>
-                                <ul>
-                                    <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Вывоз холодильников</a></li>
-                                    <li><a href="#">Вывоз стиральных машин</a></li>
-                                    <li><a href="#">Вывоз посудомоечных машин</a></li>
-                                    <li><a href="#">Вывоз кухонных плит</a></li>
-                                    <li><a href="#">Вывоз газовых колонок</a></li>
-                                    <li><a href="#">Вывоз кондиционеров</a></li>
-                                    <li><a href="#">Вывоз металлических дверей</a></li>
-                                    <li><a href="#">Вывоз металлолома</a></li>
-                                    <li><a href="#">Вывоз утилизированных автомобилей</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Грузоперевозки</a>
-                                <ul>
-                                    <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Вывоз холодильников</a></li>
-                                    <li><a href="#">Вывоз стиральных машин</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Дополнительные услуги</a></li>
-                            <li><a href="#">Стоимость услуг</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mobile-menu">
-                <ul class="mobile-menu__list">
-                    <li><a href="#">Автопарк</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
-                </ul>
-
-                <ul class="mobile-menu__list mobile-menu__catalog">
-                    <li><a href="#">Вывоз мусора</a></li>
-                    <li class="has-child"><a href="#">Бесплатный вывоз</a>
-                        <span class="mobile-menu__toggle"></span>
-                        <ul>
-                            <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                <span class="mobile-menu__toggle"></span>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                <span class="mobile-menu__toggle"></span>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Вывоз холодильников</a></li>
-                            <li><a href="#">Вывоз стиральных машин</a></li>
-                            <li><a href="#">Вывоз посудомоечных машин</a></li>
-                            <li><a href="#">Вывоз кухонных плит</a></li>
-                            <li><a href="#">Вывоз газовых колонок</a></li>
-                            <li><a href="#">Вывоз кондиционеров</a></li>
-                            <li><a href="#">Вывоз металлических дверей</a></li>
-                            <li><a href="#">Вывоз металлолома</a></li>
-                            <li><a href="#">Вывоз утилизированных автомобилей</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-child"><a href="#">Грузоперевозки</a>
-                        <span class="mobile-menu__toggle"></span>
-                        <ul>
-                            <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Вывоз холодильников</a></li>
-                            <li><a href="#">Вывоз стиральных машин</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Дополнительные услуги</a></li>
-                    <li><a href="#">Стоимость услуг</a></li>
-                </ul>
-
-            </div>
         </div>
     </div>
+</div>

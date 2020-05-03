@@ -57,10 +57,10 @@ body *{
 }
 p{
   line-height: 120%;
-  margin: 0 0 18px 0;
-  font-size: 14px;
+  margin: 0 0 12px 0;
+  font-size: 12px;
   @media($bp-larger-than-mobile) {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 a{
@@ -85,6 +85,7 @@ a{
   max-width: 220px;
   align-items: center;
   justify-content: center;
+  border: 0 none;
   &:hover{
     background-color: $red;
     text-decoration: none;
@@ -954,9 +955,13 @@ a{
   }
 }
 
+
 .breadcrumbs{
-  display: block;
-  padding: 8px 0 12px;
+  padding: 13px 0 12px;
+  display: none;
+  @media ($bp-larger-than-phablet) {
+    display: block;
+  }
   ul{
     margin: 0;
     padding: 0;
@@ -965,17 +970,33 @@ a{
       margin: 0;
       padding: 0;
       display: inline-block;
+      font-weight: 300;
       font-size: 12px;
-      line-height: 15px;
+      line-height: 16px;
       color: #888888;
-      &:before {
-        margin: 0 7px;
-        content: "\203A";
-        vertical-align: top;
-        display: inline-block;
-        background-repeat: no-repeat;
-        color: #888888;
-        font-size: 22px;
+      +li{
+        &:before{
+          margin: 0 7px;
+          content: "\203A";
+          vertical-align: top;
+          display: inline-block;
+          background-repeat: no-repeat;
+          color: #888888;
+          font-size: 18px;
+          line-height: 14px;
+        }
+      }
+    }
+    a{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #888;
+      text-decoration: none;
+      transition: $anim5;
+      &:hover{
+        color: $red;
+        text-decoration: none;
       }
     }
   }
@@ -988,6 +1009,7 @@ h1{
   color: #242424;
   font-weight: normal;
   margin-bottom: 20px;
+  margin-top: 0;
   @media ($bp-larger-than-tablet) {
     font-size: 18px;
     line-height: 22px;
@@ -999,5 +1021,63 @@ h1{
   @media ($bp-larger-than-desktop) {
   display: inline-block;
     margin-bottom: 4px;
+  }
+}
+
+.maintext{
+  padding-top: 12px;
+  padding-bottom: 22px;
+  h1{
+    margin-bottom: 15px;
+  }
+}
+
+
+.brands{
+  padding: 10px 0;
+  &__header{
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 29px;
+  }
+  &__grid{
+    display: flex;
+    justify-content: center;
+    margin-left: -7px;
+    margin-right: -7px;
+    flex-wrap: wrap;
+  }
+  &__item{
+    padding: 0 7px 14px;
+    width: 50%;
+    @media ($bp-larger-than-phablet) {
+      width: 192px;
+    }
+  }
+  &__card{
+    padding: 8px 4px;
+    background: #fff;
+    border-radius: 10px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: $anim5;
+    border: 1px solid #fff;
+    max-width: 161px;
+    margin-left: auto;
+    margin-right: auto;
+    @media ($bp-larger-than-phablet) {
+      width: 100%;
+      max-width: none;
+    }
+    &:hover{
+      border: 1px solid $red;
+    }
+    img{
+
+    }
   }
 }

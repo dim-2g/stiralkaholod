@@ -18,11 +18,14 @@
 }
 
 .advantages{
-  background: #0088CC;
-  border-radius: 10px;
-  padding: 15px;
-  @media ($bp-larger-than-tablet) {
-    padding: 15px 30px 30px;
+
+  &__body{
+    background: #0088CC;
+    border-radius: 10px;
+    padding: 15px;
+    @media ($bp-larger-than-tablet) {
+      padding: 15px 20px 43px;
+    }
   }
   &__header{
     text-align: center;
@@ -33,14 +36,13 @@
     @media ($bp-larger-than-tablet) {
       font-size: 18px;
       line-height: 22px;
-      margin-bottom: 40px;
+      margin-bottom: 45px;
     }
   }
   &__box{
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     @media ($bp-larger-than-desktop) {
       flex-direction: row;
     }
@@ -50,23 +52,56 @@
     text-align: center;
     font-size: 12px;
     line-height: 15px;
+    @media ($bp-larger-than-tablet) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &:last-child{
+      .advantages__card:after{
+        display: none;
+      }
+    }
+  }
+  &__card{
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-width: 200px;
     background: #FFFFFF;
     border-radius: 10px;
     margin-bottom: 16px;
-    min-width: 238px;
     height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media ($bp-larger-than-tablet) {
-      font-size: 18px;
-      line-height: 22px;
-    }
     @media ($bp-larger-than-desktop) {
+      padding-right: 25px;
+      height: auto;
       background: #0088CC;
       border-radius: 0;
       color: #FFFFFF;
       margin-bottom: 0;
+    }
+    @media ($bp-larger-than-desktophd) {
+      min-width: 265px;
+    }
+    &:after{
+      content: "";
+      display: none;
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      position: absolute;
+      right: 0;
+      top: 11px;
+      transform: rotate(-45deg);
+      @media ($bp-larger-than-desktop) {
+        display: inline-block;
+      }
     }
   }
 }

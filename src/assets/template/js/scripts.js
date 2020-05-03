@@ -24,6 +24,27 @@ $(function() {
         }
     });
 
+    //сворачивание и разворачивание группы в фильтре
+    $('body').on('click', '.filter__caption', function (e) {
+        e.preventDefault();
+        console.log('filter__caption');
+        var filterGroup = $(this).closest('.filter__group');
+        var filterBody = filterGroup.find('.filter__body');
+        if (filterGroup.hasClass('active')) {
+            filterBody.slideUp(500, function() {
+                filterBody.stop(true, true);
+                filterGroup.removeClass('active');
+            });
+
+        } else {
+            filterBody.slideDown(500, function() {
+                filterBody.stop(true, true);
+                filterGroup.addClass('active');
+            });
+
+        }
+    });
+
     //сворачивание и разворачивание подменю для мобильного
     $('body').on('click', '.mobile-menu__toggle', function(e) {
         e.preventDefault();
@@ -90,33 +111,25 @@ $(function() {
     });
 
     $('select.styler').styler();
-    $('select.styler-popup-form').styler({
-        selectSmartPositioning: false,
-        singleSelectzIndex: '999',
-    });
     $('.checkbox-styler').styler();
 
-    $('body').on('click', '[data-step-index]', function(e) {
-        e.preventDefault();
-        $('[data-step-index]').removeClass('active');
-        $(this).addClass('active');
-        var index = $(this).attr('data-step-index');
-        console.log(index);
-    });
 
-    $('body').on('click', '[data-quiz-nav]', function(e) {
+    $('body').on('click', '.catalog-filter-button, .sidebar-close', function(e) {
+        e.stopPropagation();
         e.preventDefault();
-        var action = $(this).attr('data-quiz-nav');
-        var quizContainer = $(this).parents('[data-quiz-step]');
-        var currentStep = parseInt(quizContainer.attr('data-quiz-step'));
-        if (action == 'next') {
-            currentStep++;
+        var sidebar = $('.catalog__sidebar');
+        var overlay = $('.overlay-light');
+        if (sidebar.hasClass('open')) {
+            sidebar.removeClass('open');
+            setTimeout(function() {
+                overlay.hide();
+
+            }, 150);
+
         } else {
-            currentStep--;
+            sidebar.addClass('open');
+            overlay.show();
         }
-        quizContainer.attr('data-quiz-step', currentStep);
-        setQuizNav(quizContainer, currentStep);
-        setQuizTab(quizContainer, currentStep);
     });
 
 });
@@ -320,4 +333,11 @@ var resizedw = function(){
 
 $(document).scroll(function(){
     setFixedHeader();
+});
+
+$(window).on("load",function(){
+    $(".filter__items").mCustomScrollbar({
+        setHeight: 116,
+        theme: "dark"
+    });
 });

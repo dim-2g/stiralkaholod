@@ -208,9 +208,9 @@ function styles(){
 				.pipe(prefixer({ 
 				    cascade: false
 				})) 
-				.pipe(cleanCss({
-					level: 2
-				}))
+				//.pipe(cleanCss({
+				//	level: 2
+				//}))
 				//.pipe(concat("app.css"))
 				.pipe(concat("main.css"))
 				// .pipe(sourcemaps.write())

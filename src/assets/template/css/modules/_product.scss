@@ -1,0 +1,224 @@
+.product{
+  &__grid{
+    display: flex;
+  }
+  &__image{
+    width: 367px;
+    flex-shrink: 0;
+  }
+  &__info{
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    .flag{
+      background: $red;
+      padding: 3px 3px;
+      border-radius: 10px;
+      width: 44px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &__actions{
+    width: 367px;
+    flex-shrink: 0;
+  }
+  &__discount{
+    margin-bottom: 20px;
+  }
+}
+.product-gallery{
+  &__item{
+    height: 367px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+
+.product-panel{
+  color: #fff;
+  &__prices{
+    border-radius: 10px 10px 0px 0px;
+    padding: 9px 22px;
+    border-bottom: 1px solid #fff;
+    background: #0088CC;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &__body{
+    border-radius: 0px 0px 10px 10px;
+    background: #0088CC;
+    padding: 11px 22px 11px;
+    min-height: 307px;
+  }
+  &__price{
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 9px;
+  }
+  &__cur{
+    font-size: 18px;
+    font-weight: 500;
+  }
+  &__oldprice{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: line-through;
+    padding-top: 3px;
+  }
+  &__warranty{
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-bottom: 19px;
+  }
+  &__buy{
+    margin-bottom: 24px;
+    a{
+      display: flex;
+      background: #FF3D00;
+      border-radius: 10px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+      transition: $cubic02;
+      &:hover{
+        background-color: #fff;
+        color: $red;
+        text-decoration: none;
+      }
+    }
+  }
+  &__oneclick{
+    margin-bottom: 19px;
+    a{
+      display: flex;
+      background: #0088CC;
+      border-radius: 10px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+      transition: $cubic02;
+      border: 1px solid #fff;
+      &:hover{
+        border-color: $red;
+        background-color: $red;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.product-delivery{
+  &__name{
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 9px;
+  }
+  &__text{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.product-params{
+  margin-bottom: auto;
+  &__header{
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 14px;
+  }
+  &__grid{
+    margin-bottom: 24px;
+  }
+  &__all{
+    margin-bottom: 24px;
+  }
+}
+.param{
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  +.param{
+    margin-top: 6px;
+  }
+  &__name{
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-right: 3px;
+  }
+  &__sep{
+    width: 100%;
+    border-bottom: 1px dotted #2C2C2C;
+    height: 11.5px;
+  }
+  &__value{
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-left: 3px;
+  }
+}
+.product-brand{
+  &__card{
+    padding: 8px 12px;
+    background: #fff;
+    border-radius: 10px;
+    height: 47px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: $anim5;
+    border: 1px solid #fff;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover{
+      border: 1px solid $red;
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__all{
+    margin-bottom: 7px;
+    a{
+      padding-left: 6px;
+      text-decoration: underline;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+.products{
+  &__body{
+    margin-bottom: 18px;
+  }
+}
