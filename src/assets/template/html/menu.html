@@ -1,0 +1,75 @@
+//= include/header.html
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__body">
+            <ul>
+                <li><a href="/menu.html">Главная страница</a></li>
+                <li><span>Оглавление</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="textpage">
+    <div class="container">
+        <div class="textpage__body stext fix-height">
+            <h1>Оглавление</h1>
+            <h2>Верстка страниц</h2>
+            <ul>
+                <li><a href="/index.html">Главная страница</a></li>
+                <li><a href="/catalog.html">Каталог</a></li>
+                <li><a href="/product.html">Карточка товара</a> всплывающее окно</li>
+                <li><a href="/cart.html">Корзина</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+                <li><a href="/articles.html">Каталог статей</a></li>
+                <li><a href="/article.html">Карточка статьи</a></li>
+                <li><a href="/company.html">О компании</a> !!! преимущества поправить, проверить адаптив</li>
+                <li><a href="/text.html">Текстовая страница (доставка, ПК и т.д.</a></li>
+                <li><a href="/search.html">Результаты поиска</a></li>
+                <li><a href="/404.html">404</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+            </ul>
+            <h2>Всплывающие окна</h2>
+            <ul>
+                <li><a href="#thankyou" data-fancybox="">Спасибо за Ваш заказ</a></li>
+                <li><a href="#oneclick">Купить в 1 клик</a></li>
+                <li><a href="#addproduct" data-fancybox="">Товар добавлен в корзину</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+</div>
+
+
+<div style="display: none;">
+    <div id="thankyou" class="thankyou-popup">
+        <div class="thankyou-popup__header">
+            Спасибо за Ваш заказ!
+        </div>
+        <div class="thankyou-popup__body">
+            Наш менеджер свяжется с вами в течение <nobr>30 минут</nobr> в рабочее время.<br />
+            Мы работаем с понедельника по пятницу с 09.00 до 18.00.
+        </div>
+    </div>
+
+    <div id="addproduct" class="addproduct-popup">
+        <div class="addproduct-popup__text">
+            <div class="addproduct-popup__name">Стиральная машина Bosch Serie 2</div>
+            успешно добавлен(а) в корзину
+        </div>
+        <div class="addproduct-popup__actions">
+            <a href="" class="btn-o">Продолжить покупки</a>
+            <a href="" class="btn">Оформить заказ</a>
+        </div>
+    </div>
+</div>
+
+
+//= include/footer.html
+
+<!-- @if NODE_ENV='development' -->
+//= include/mediahelp.html
+<!-- @endif -->

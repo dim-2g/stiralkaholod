@@ -1,22 +1,61 @@
 .product{
+  margin-bottom: 22px;
   &__grid{
     display: flex;
+    //flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    @media ($bp-larger-than-tablet) {
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    @media ($bp-larger-than-desktop) {
+      flex-wrap: nowrap;
+      //flex-direction: row;
+    }
   }
   &__image{
-    width: 367px;
+    width: 100%;
+    max-width: 345px;
     flex-shrink: 0;
+    order: 1;
+    @media ($bp-larger-than-tablet) {
+      max-width: 345px;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 320px;
+    }
+    @media ($bp-larger-than-desktophd) {
+      width: 367px;
+    }
   }
   &__info{
+    margin-top: 13px;
+    margin-bottom: 23px;
     width: 100%;
-    padding: 0 20px;
+    max-width: 345px;
     display: flex;
     flex-direction: column;
+    order: 2;
+    @media ($bp-larger-than-tablet) {
+      margin-top: 25px;
+      padding: 0 20px;
+      max-width: none;
+      width: 100%;
+      order: 4;
+    }
+    @media ($bp-larger-than-desktop) {
+      margin-top: 0;
+      order: 2;
+    }
     .flag{
       background: $red;
       padding: 3px 3px;
       border-radius: 10px;
-      width: 44px;
-      height: 24px;
+      width: 50px;
+      height: 27px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -28,11 +67,26 @@
     }
   }
   &__actions{
-    width: 367px;
+    width: 100%;
+    max-width: 345px;
     flex-shrink: 0;
+    order: 3;
+    @media ($bp-larger-than-tablet) {
+      max-width: 345px;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 320px;
+    }
+    @media ($bp-larger-than-desktophd) {
+      width: 367px;
+    }
   }
   &__discount{
-    margin-bottom: 20px;
+    display: none;
+    @media ($bp-larger-than-desktop) {
+      margin-bottom: 23px;
+      display: block;
+    }
   }
 }
 .product-gallery{
@@ -50,7 +104,7 @@
   color: #fff;
   &__prices{
     border-radius: 10px 10px 0px 0px;
-    padding: 9px 22px;
+    padding: 9px 15px;
     border-bottom: 1px solid #fff;
     background: #0088CC;
     color: #fff;
@@ -61,50 +115,80 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    @media ($bp-larger-than-iphone6) {
+      padding: 9px 22px;
+    }
   }
   &__body{
     border-radius: 0px 0px 10px 10px;
     background: #0088CC;
-    padding: 11px 22px 11px;
-    min-height: 307px;
+    padding: 11px 15px;
+    @media ($bp-larger-than-iphone6) {
+      padding: 13px 34px 11px 37px;
+    }
+    @media ($bp-larger-than-phablet) {
+      min-height: 307px;
+      padding: 11px 34px 11px 37px;
+    }
   }
   &__price{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
     margin-right: 9px;
+    @media ($bp-larger-than-iphone6) {
+      font-size: 22px;
+    }
   }
   &__cur{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
+    @media ($bp-larger-than-iphone6) {
+      font-size: 18px;
+    }
   }
   &__oldprice{
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     text-decoration: line-through;
     padding-top: 3px;
+    @media ($bp-larger-than-iphone6) {
+      font-size: 16px;
+    }
   }
   &__warranty{
     font-size: 14px;
     line-height: 17px;
     color: #FFFFFF;
     margin-bottom: 19px;
+    text-align: center;
+    @media ($bp-larger-than-phablet) {
+      text-align: left;
+    }
   }
   &__buy{
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 24px;
+    }
     a{
       display: flex;
       background: #FF3D00;
       border-radius: 10px;
-      height: 45px;
+      height: 35px;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 17px;
       color: #fff;
-      transition: $cubic02;
+      transition: $cubic;
+      @media ($bp-larger-than-phablet) {
+        font-size: 18px;
+        line-height: 22px;
+        height: 45px;
+      }
       &:hover{
         background-color: #fff;
         color: $red;
@@ -113,21 +197,29 @@
     }
   }
   &__oneclick{
-    margin-bottom: 19px;
+    margin-bottom: 7px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 19px;
+    }
     a{
       display: flex;
       background: #0088CC;
       border-radius: 10px;
-      height: 45px;
+      height: 35px;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-weight: 500;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 17px;
       color: #fff;
-      transition: $cubic02;
+      transition: $cubic;
       border: 1px solid #fff;
+      @media ($bp-larger-than-phablet) {
+        height: 45px;
+        font-size: 18px;
+        line-height: 22px;
+      }
       &:hover{
         border-color: $red;
         background-color: $red;
@@ -136,8 +228,31 @@
       }
     }
   }
+  .flag{
+    background: $red;
+    padding: 3px 3px;
+    border-radius: 10px;
+    width: 50px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 18px;
+    @media ($bp-larger-than-desktop) {
+      display: none;
+    }
+  }
 }
 .product-delivery{
+  display: none;
+  @media ($bp-larger-than-phablet) {
+    display: block;
+  }
   &__name{
     font-size: 14px;
     line-height: 17px;
@@ -157,9 +272,27 @@
   }
   &__grid{
     margin-bottom: 24px;
+    @media ($bp-larger-than-tablet) {
+      margin-bottom: 21px;
+    }
   }
   &__all{
-    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    @media ($bp-larger-than-tablet) {
+      margin-bottom: 24px;
+    }
+    a{
+      font-size: 12px;
+      line-height: 15px;
+      text-decoration: underline;
+    }
+  }
+}
+.product-brand--mobile{
+  display: inline;
+  @media ($bp-larger-than-tablet) {
+    display: none;
   }
 }
 .param{
@@ -167,7 +300,7 @@
   line-height: 15px;
   display: flex;
   +.param{
-    margin-top: 6px;
+    margin-top: 10px;
   }
   &__name{
     white-space: nowrap;
@@ -186,6 +319,10 @@
   }
 }
 .product-brand{
+  display: none;
+  @media ($bp-larger-than-tablet) {
+    display: block;
+  }
   &__card{
     padding: 8px 12px;
     background: #fff;
@@ -217,8 +354,87 @@
     }
   }
 }
-.products{
-  &__body{
+
+.product-brands{
+  padding-top: 30px;
+  padding-bottom: 18px;
+  display: none;
+  @media ($bp-larger-than-phablet) {
+    display: block;
+  }
+}
+
+
+.products-interes{
+  @media ($bp-larger-than-phablet) {
+    padding-top: 22px;
+    padding-bottom: 10px;
+  }
+  &__header{
+    color: #242424;
+    text-align: center;
     margin-bottom: 18px;
+    font-size: 14px;
+    line-height: 17px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__info{
+    text-align: center;
+    margin-bottom: 20px;
+    a{
+      font-size: 12px;
+      line-height: 15px;
+      text-decoration-line: underline;
+      color: #242424;
+      transition: $anim5;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  &__body{
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 18px;
+    }
+  }
+  &__box{
+    display: flex;
+  }
+  &__sidebar{
+    width: 270px;
+    flex-shrink: 0;
+    margin-left: 20px;
+  }
+  &__grid{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+  }
+  &--wrap{
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 100%;
+    padding: 0 10px 20px 10px;
+    @media ($bp-larger-than-iphone5) {
+      width: 50%;
+    }
+    @media ($bp-larger-than-tablet) {
+      width: 50%;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 25%;
+    }
+  }
+}
+.product-advantages{
+  padding-bottom: 35px;
+  @media ($bp-larger-than-phablet) {
+    padding-bottom: 0;
   }
 }

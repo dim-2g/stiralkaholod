@@ -80,16 +80,14 @@ $(function() {
     //инициализация верхнего слайдера
     initMainSlider();
     //инициализация слайдера Акций
-    initActionSlider();
-    //инициализация слайдера парйс-листа
-    initPriceSlider();
-    //инициализация слайдера машин на странице О компании
-    initCarSlider();
-    //скрываем часть товаров под кнопку Показать все
-    setCountProducts();
+    //инициализация слайдера похожих статей
+    initRelatedArticles();
     //инициализация всех табов
     initXtab();
+    //установка высоты плавающего хедера
     setHeaderHeight();
+    //установка высоты страницы 404
+    initErrorPageHeigth();
 
     //показ всех товаров в каталоге при клике на "Показать еще"
     $('body').on('click', '.more-js', function(e) {
@@ -134,20 +132,6 @@ $(function() {
 
 });
 
-var setQuizNav = function(quizContainer, currentStep) {
-    var navs = quizContainer.find('[data-quiz-index]');
-    navs.removeClass('active');
-    navs.each(function() {
-        if ($(this).attr('data-quiz-index') < currentStep) {
-            $(this).addClass('active');
-        }
-    });
-};
-
-var setQuizTab = function(quizContainer, currentStep) {
-    quizContainer.find('[data-quiz-tab]').removeClass('active');
-    quizContainer.find('[data-quiz-tab="'+currentStep+'"]').addClass('active');
-};
 
 var initXtab = function() {
     setTimeout(function() {
@@ -200,8 +184,8 @@ var initActionSlider = function() {
     });
 };
 
-var initCarSlider = function() {
-    var selector = '.car-slider-js';
+var initRelatedArticles = function() {
+    var selector = '.related-articles-js';
     $(selector).owlCarousel({
         loop: true,
         margin: 0,
@@ -210,23 +194,23 @@ var initCarSlider = function() {
         responsive:{
             0:{
                 items: 1,
-                nav: true,
-                dots: false,
+                nav: false,
+                dots: true,
             },
             750:{
                 items: 2,
-                nav: true,
-                dots: false,
+                nav: false,
+                dots: true,
             },
             1000:{
                 items: 3,
-                nav: true,
-                dots: false,
+                nav: false,
+                dots: true,
             },
             1200:{
-                items: 4,
-                nav: true,
-                dots: false,
+                items: 3,
+                nav: false,
+                dots: true,
             }
         }
     });
@@ -315,7 +299,20 @@ var setFixedHeader = function() {
     } else {
         $('body').removeClass('fix-header');
     }
-}
+};
+
+var initErrorPageHeigth = function() {
+  var errorPageBody = $('.fix-height');
+  if (errorPageBody.length == 1) {
+      var windowHeight = $(window).outerHeight();
+      var bodyHeight = $('body').outerHeight();
+      var errorPageBodyHeight = errorPageBody.outerHeight();
+      var newErrorPageHeight = windowHeight - (bodyHeight - errorPageBodyHeight);
+      if (bodyHeight < windowHeight) {
+          errorPageBody.css({'min-height': newErrorPageHeight});
+      }
+  }
+};
 
 var doit;
 $(window).resize(function(){

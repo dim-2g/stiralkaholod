@@ -1,0 +1,213 @@
+.contacts{
+  padding-bottom: 30px;
+  &__grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    @media ($bp-larger-than-phablet) {
+      align-items: flex-start;
+      margin-left: -10px;
+      margin-right: -10px;
+      flex-direction: row;
+    }
+  }
+  &__item{
+    width: 100%;
+    max-width: 390px;
+    padding-bottom: 20px;
+    @media ($bp-larger-than-phablet) {
+      padding: 0 10px 30px;
+      width: 50%;
+    }
+    &--phone{
+      .contacts-panel{
+        &__name{
+          a{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+  &__body{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    flex-direction: column;
+    @media ($bp-larger-than-phablet) {
+      padding-top: 10px;
+    }
+    @media ($bp-larger-than-desktop) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+  &__form{
+    width: 100%;
+    flex-shrink: 0;
+    @media ($bp-larger-than-phablet) {
+      width: 366px;
+    }
+    @media ($bp-larger-than-desktop) {
+      margin-left: 20px;
+    }
+  }
+  &__map{
+    height: 200px;
+    //border: 1px solid #ccc;
+    border-radius: 10px;
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  &__content{
+    margin-bottom: 24px;
+    @media ($bp-larger-than-desktop) {
+      margin-bottom: 0;
+    }
+  }
+}
+.contacts-panel{
+  background: #FFFFFF;
+  border-radius: 10px;
+  height: 1%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  @media ($bp-larger-than-phablet) {
+    min-height: 100px;
+  }
+  &__name{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  &__text{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+
+.contacts-form {
+  padding: 15px 15px 15px 15px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  @media ($bp-larger-than-iphone5) {
+    padding: 15px 30px 15px 30px;
+  }
+  @media ($bp-larger-than-tablet) {
+    padding: 15px 36px 15px 36px;
+  }
+  &__header {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #222222;
+    display: block;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 6px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &__text{
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    line-height: 15px;
+    margin-bottom: 8px;
+    @media ($bp-larger-than-phablet) {
+      display: none;
+    }
+  }
+
+  &__item{
+    //max-width: 330px;
+    width: 100%;
+    margin-bottom: 4px;
+    @media ($bp-larger-than-tablet) {
+      //margin-bottom: 0;
+    }
+    input{
+      width: 100%;
+      border-radius: 10px;
+      padding: 3px 12px;
+      border: 0 none;
+      font-size: 12px;
+      height: 35px;
+      background: #F8F8F8;
+      @media ($bp-larger-than-phablet) {
+        //background: #fff;
+      }
+    }
+  }
+  &__label{
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 5px;
+  }
+  &__bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    @media ($bp-larger-than-tablet) {
+      flex-direction: row;
+    }
+  }
+  &__comment{
+    width: 100%;
+    margin-bottom: 14px;
+    textarea{
+      height: 84px;
+      background: #F8F8F8;
+      border-radius: 10px;
+      padding: 12px 12px;
+      border: 0 none;
+      width: 100%;
+      @media ($bp-larger-than-phablet) {
+        //background: #fff;
+      }
+    }
+  }
+  &__textarea{
+    margin-bottom: 15px;
+    @media ($bp-larger-than-tablet) {
+      margin-bottom: 0;
+    }
+  }
+  &__button{
+    margin-bottom: 11px;
+    .btn{
+      width: 100%;
+      max-width: 100%;
+      height: 35px;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 500;
+    }
+  }
+  &__privacy{
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    a{
+      color: #242424;
+      text-decoration: underline;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+}

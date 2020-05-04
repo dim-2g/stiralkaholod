@@ -1,0 +1,71 @@
+.error-page{
+  &__body{
+    background: transparent url('/assets/template/images/blot.png') 0 20% no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 0;
+    background-size: 60%;
+    @media ($bp-larger-than-phablet) {
+      background-position: 0 20%;
+      background-size: 50%;
+    }
+    @media ($bp-larger-than-desktop) {
+        background-position: 10px 60%;
+        background-size: auto;
+    }
+  }
+  &__header{
+    font-weight: bold;
+    font-size: 120px;
+    line-height: 1;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 32px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 200px;
+      margin-bottom: 32px;
+    }
+    @media ($bp-larger-than-desktop) {
+      font-size: 288px;
+    }
+  }
+  &__text{
+    margin-bottom: 14px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 29px;
+    }
+    p{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #242424;
+      @media ($bp-larger-than-phablet) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 0;
+      }
+      + p {
+        margin-top: 16px;
+        padding: 0 20px;
+        @media ($bp-larger-than-phablet) {
+          margin-top: 1px;
+          padding: 0;
+        }
+      }
+    }
+  }
+  &__link{
+    .btn{
+      margin-left: auto;
+      margin-right: auto;
+      width: 230px;
+      max-width: 230px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

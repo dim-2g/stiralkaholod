@@ -1,0 +1,125 @@
+//= include/header.html
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__body">
+            <ul>
+                <li><a href="/menu.html">Главная страница</a></li>
+                <li><span>Контакты</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="contacts">
+    <div class="container">
+        <h1>Наши контакты</h1>
+        <div class="contacts__body">
+            <div class="contacts__content">
+                <div class="contacts__grid">
+
+                    <div class="contacts__item contacts__item--phone">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                <a href="tel:8 (812) 999-99-99">8 (812) 999-99-99</a>
+                            </div>
+                            <div class="contacts-panel__text">
+                                c 09.00 до 18.00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
+                            </div>
+                            <div class="contacts-panel__text">
+                                для заявок, круглосуточно
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                Адрес офиса
+                            </div>
+                            <div class="contacts-panel__text">
+                                Санкт-Петербург,<br />
+                                Б.Сампсониевский пр., д. 82, офис 1
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                Реквизиты
+                            </div>
+                            <div class="contacts-panel__text">
+                                ООО “Название компании”<br />
+                                ИНН 78000000, КПП 7800000000<br />
+                                ОГРН 00000000000000
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contacts__map">
+                    <img src="/assets/template/images/map.jpg" alt="">
+                </div>
+            </div>
+            <div class="contacts__form">
+
+                <div class="contacts-form">
+                    <div class="contacts-form__header">
+                        Если остались вопросы,<br />
+                        свяжитесь с нами
+                    </div>
+                    <form action="">
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Имя</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Телефон</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="phone" placeholder="" data-mask="+7 (999) 999-99-99">
+                            </div>
+                        </div>
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Email*</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="contacts-form__comment">
+                            <div class="contacts-form__label">Сообщение</div>
+                            <div class="contacts-form__textarea">
+                                <textarea name="" id=""></textarea>
+                            </div>
+                        </div>
+                        <div class="contacts-form__button">
+                            <button class="btn">Отправить</button>
+                        </div>
+                        <div class="contacts-form__privacy">
+                            Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
+                            с <a href="">Политикой конфиденциальности</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+//= include/footer.html
+
+<!-- @if NODE_ENV='development' -->
+//= include/mediahelp.html
+<!-- @endif -->

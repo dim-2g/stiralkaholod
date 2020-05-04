@@ -1,0 +1,34 @@
+//= include/header.html
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__body">
+            <ul>
+                <li><a href="/menu.html">Главная страница</a></li>
+                <li><span>404</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="error-page">
+    <div class="container">
+        <div class="error-page__body fix-height">
+            <div class="error-page__header">404</div>
+            <div class="error-page__text">
+                <p>Что-то пошло не так ...</p>
+                <p>Запрашиваемая вами страница не найдена.</p>
+            </div>
+            <div class="error-page__link">
+                <a href="/" class="btn">Вернуться на главную страницу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+//= include/footer.html
+
+<!-- @if NODE_ENV='development' -->
+//= include/mediahelp.html
+<!-- @endif -->

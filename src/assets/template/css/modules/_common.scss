@@ -92,6 +92,26 @@ a{
     color: #fff;
   }
 }
+.btn-o{
+  background: transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  color: $red;
+  transition: $cubic;
+  display: flex;
+  height: 29px;
+  width: 100%;
+  max-width: 220px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $red;
+  &:hover{
+    background-color: $red;
+    text-decoration: none;
+    color: #fff;
+  }
+}
 .topline{
   background: #F8F8F8;
   display: none;
@@ -314,8 +334,13 @@ a{
   padding-top: 4px;
   padding-left: 6px;
   position: relative;
+  transition: $cubic;
   @media ($bp-larger-than-phablet) {
     background: #0088CC;
+  }
+  &:hover{
+    border-color: $red;
+    background: $red;
   }
   svg{
     vertical-align: top;
@@ -398,8 +423,13 @@ a{
     position: absolute;
     top: 0;
     right: 0;
+    transition: $cubic;
     @media ($bp-larger-than-phablet) {
       background: #0088CC;
+    }
+    &:hover{
+      border-color: $red;
+      background: $red;
     }
   }
   svg{
@@ -1034,12 +1064,20 @@ h1{
 
 
 .brands{
-  padding: 10px 0;
+  padding: 10px 0 0;
+  @media ($bp-larger-than-phablet) {
+    padding: 10px 0;
+  }
   &__header{
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 17px;
     text-align: center;
-    margin-bottom: 29px;
+    margin-bottom: 21px;
+    @media ($bp-larger-than-phablet) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 29px;
+    }
   }
   &__grid{
     display: flex;
@@ -1051,7 +1089,13 @@ h1{
   &__item{
     padding: 0 7px 14px;
     width: 50%;
-    @media ($bp-larger-than-phablet) {
+    @media ($bp-larger-than-tablet) {
+      width: 33%;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 33%;
+    }
+    @media ($bp-larger-than-desktophd) {
       width: 192px;
     }
   }

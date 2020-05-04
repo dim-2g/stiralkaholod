@@ -1,0 +1,123 @@
+.search-page{
+  padding-top: 14px;
+  padding-bottom: 20px;
+  @media ($bp-larger-than-phablet) {
+    padding-top: 22px;
+  }
+  h1, .header1{
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 20px;
+    }
+  }
+  &__header{
+    font-size: 18px;
+    line-height: 22px;
+    color: #242424;
+    text-align: center;
+  }
+  &__info{
+    text-align: center;
+    margin-bottom: 20px;
+    a{
+      font-size: 12px;
+      line-height: 15px;
+      text-decoration-line: underline;
+      color: #242424;
+      transition: $anim5;
+      &:hover{
+        color: $red;
+      }
+    }
+  }
+  &__box{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+  &__grid{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-wrap: wrap;
+  }
+  &__item{
+    padding: 0 10px 20px;
+    @media ($bp-larger-than-iphone5) {
+      width: 50%;
+    }
+    @media ($bp-larger-than-tablet) {
+      width: 33.33%;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 25%;
+    }
+  }
+  &__more{
+    width: 133px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  &__text{
+    margin-top: 19px;
+  }
+}
+
+.catalog-search{
+  max-width: 946px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  background: #fff;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  padding-right: 76px;
+  position: relative;
+  width: 100%;
+  form{
+    display: flex;
+    width: 100%;
+  }
+  input[type="text"] {
+    width: 100%;
+    height: 35px;
+    border: 0 none;
+    background: transparent;
+    font-size: 12px;
+    line-height: 15px;
+    color: #888888;
+    padding: 4px 12px 4px 31px;
+  }
+  button{
+    background: #0088CC;
+    border-radius: 10px;
+    height: 35px;
+    width: 76px;
+    padding-top: 4px;
+    padding-left: 6px;
+    border: 1px solid #0088CC;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: $cubic;
+    &:hover{
+      border-color: $red;
+      background: $red;
+    }
+  }
+  svg{
+    path{
+      stroke: #fff;
+    }
+  }
+}

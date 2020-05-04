@@ -97,247 +97,68 @@
         <div class="breadcrumbs__body">
             <ul>
                 <li><a href="/menu.html">Главная страница</a></li>
-                <li><span>Корзина</span></li>
+                <li><span>Оглавление</span></li>
             </ul>
         </div>
     </div>
 </div>
 
-<div class="cart">
+<div class="textpage">
     <div class="container">
-        <div class="cart__body">
-            <h1>Корзина</h1>
-
-            <div class="cart" id="msCart">
-                <div class="cart-table">
-                    <div class="cart-table__header">
-                        <div class="cart-col cart-col__image"></div>
-                        <div class="cart-col cart-col__name">Наименование товара</div>
-                        <div class="cart-col cart-col__price">Стоимость</div>
-                        <div class="cart-col__quantity-cost">
-                            <div class="cart-col cart-col__quantity">Количество</div>
-                            <div class="cart-col cart-col__cost">Итог</div>
-                        </div>
-                        <div class="cart-col cart-col__delete"></div>
-                    </div>
-
-                    <div class="cart-table__item" id="fc082734cfcda80b709cb0712ff90eab">
-
-                        <div class="cart-table__row cart-item">
-                            <div class="cart-col cart-col__image">
-                                <div class="cart-image" style="background-image: url('/assets/template/images/products/product-1.jpg')">
-
-                                </div>
-                            </div>
-                            <div class="cart-col cart-col__info">
-                                <div class="cart-table__discount">
-                                    <div class="flag flag-discount">-10%</div>
-                                </div>
-                                <div class="cart-col cart-col__name">
-                                    Стиральная машина Bosch
-                                </div>
-                                <div class="cart-col cart-col__price">
-                                    <span class="cart-price"><span class="cart-item-cost">18 000</span> руб</span>
-                                </div>
-                                <div class="cart-col__quantity-cost">
-                                    <div class="cart-col cart-col__quantity">
-                                        <form method="post" class="ms2_form" role="form">
-                                            <div class="incrementer">
-                                                <span class="minus"></span>
-                                                <input data-current="1" data-price="0,00" class="js_zcount -count_live" type="text" name="count" value="1" placeholder="">
-                                                <span class="plus"></span>
-                                            </div>
-                                            <button class="btn btn-default" type="submit" name="ms2_action" value="cart/change" style="display: none;">
-                                                <i class="glyphicon glyphicon-refresh"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                    <div class="cart-col cart-col__cost">
-                                        <span class="cart-price"><span class="price-sum">18 000</span> руб</span>
-                                    </div>
-                                </div>
-                                <div class="cart-col cart-col__delete">
-                                    <form method="post" class="ms2_form">
-                                        <input type="hidden" name="key" value="fc082734cfcda80b709cb0712ff90eab">
-                                        <button class="cart-table__delete" name="ms2_action" value="cart/remove"></button>
-                                    </form>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="cart-table__item" id="2fc082734cfcda80b709cb0712ff90eab">
-
-                        <div class="cart-table__row cart-item">
-                            <div class="cart-col cart-col__image">
-                                <div class="cart-image" style="background-image: url('/assets/template/images/products/product-2.png')">
-
-                                </div>
-                            </div>
-                            <div class="cart-col cart-col__info">
-                                <div class="cart-col cart-col__name">
-                                    Стиральная машина LG
-                                </div>
-                                <div class="cart-col cart-col__price">
-                                    <span class="cart-price"><span class="cart-item-cost">10 000</span> руб</span>
-                                </div>
-                                <div class="cart-col__quantity-cost">
-                                    <div class="cart-col cart-col__quantity">
-                                        <form method="post" class="ms2_form" role="form">
-                                            <div class="incrementer">
-                                                <span class="minus"></span>
-                                                <input data-current="1" data-price="0,00" class="js_zcount -count_live" type="text" name="count" value="1" placeholder="">
-                                                <span class="plus"></span>
-                                            </div>
-                                            <button class="btn btn-default" type="submit" name="ms2_action" value="cart/change" style="display: none;">
-                                                <i class="glyphicon glyphicon-refresh"></i>
-                                            </button>
-                                        </form>
-                                    </div>
-                                    <div class="cart-col cart-col__cost">
-                                        <span class="cart-price"><span class="price-sum">10 000</span> руб</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-col cart-col__delete">
-                                <form method="post" class="ms2_form">
-                                    <input type="hidden" name="key" value="fc082734cfcda80b709cb0712ff90eab">
-                                    <button class="cart-table__delete" name="ms2_action" value="cart/remove"></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="cart-total">
-                        <div class="cart-col cart-col__total-name">
-                            Итого
-                        </div>
-                        <div class="cart-col cart-col__total-count">
-                            Количество товаров: 2 шт
-                        </div>
-                        <div class="cart-col cart-col__total-cost">
-                            Общая стоимость:  28 000 руб
-                        </div>
-                    </div>
-
-                    <div class="cart-total-mobile">
-                        <div class="cart-total-mobile__header">Ваш заказ</div>
-                        <div class="cart-total-mobile__items">
-                            <div class="param">
-                                <div class="param__name">Количество товаров</div>
-                                <div class="param__sep"></div>
-                                <div class="param__value">2 шт.</div>
-                            </div>
-                            <div class="param">
-                                <div class="param__name">Общая стоимость</div>
-                                <div class="param__sep"></div>
-                                <div class="param__value">36 000 руб.</div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div class="cart-delivery-payment">
-                <div class="cart-delivery-payment__item">
-                    <div class="cart-delivery">
-                        <div class="cart-delivery__header">
-                            Доставка
-                        </div>
-                        <div class="cart-delivery__items">
-                            <div class="cart-delivery__item">
-                                <label class="radio-custom" style="">
-                                    <input name="delivery" type="radio" class="radio-custom__input" value="1" id="delivery_1" checked="">
-                                    <span class="radio-custom__pseudo"></span>
-                                    <span class="radio-custom__label"> Самовывоз (со склада по адресу: СПб, Б. Сампсониевский пр., д. 82)</span>
-                                </label>
-                            </div>
-                            <div class="cart-delivery__item">
-                                <label class="radio-custom" style="">
-                                    <input name="delivery" type="radio" class="radio-custom__input" value="2" id="delivery_2" checked="">
-                                    <span class="radio-custom__pseudo"></span>
-                                    <span class="radio-custom__label"> Курьерская доставка</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-delivery-payment__item">
-                    <div class="cart-payment">
-                        <div class="cart-payment__header">
-                            Оплата
-                        </div>
-                        <div class="cart-payment__items">
-                            <div class="cart-payment__item">
-                                <label class="radio-custom" style="">
-                                    <input name="payment" type="radio" class="radio-custom__input" value="1" id="payment_1" checked="">
-                                    <span class="radio-custom__pseudo"></span>
-                                    <span class="radio-custom__label"> Наличными при получении</span>
-                                </label>
-                            </div>
-                            <div class="cart-payment__item">
-                                <label class="radio-custom" style="">
-                                    <input name="payment" type="radio" class="radio-custom__input" value="2" id="payment_2" checked="">
-                                    <span class="radio-custom__pseudo"></span>
-                                    <span class="radio-custom__label"> Картой на сайте</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="order-form">
-                <div class="order-form__header">Контактные данные</div>
-                <div class="order-form__contacts">
-                    <div class="order-form__double">
-                        <div class="order-form__item order-form__item--name">
-                            <div class="order-form__label">Имя*</div>
-                            <div class="order-form__input">
-                                <input type="text" name="receiver" placeholder="">
-                            </div>
-                        </div>
-                        <div class="order-form__item order-form__item--phone">
-                            <div class="order-form__label">Телефон*</div>
-                            <div class="order-form__input">
-                                <input type="text" name="phone" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-form__item order-form__item--email">
-                        <div class="order-form__label">Email</div>
-                        <div class="order-form__input">
-                            <input type="text" name="email" placeholder="">
-                        </div>
-                    </div>
-                </div>
-                <div class="order-form__bottom">
-                    <div class="order-form__double">
-                        <div class="order-form__comment">
-                            <div class="order-form__label">Комментарии к заказу</div>
-                            <div class="order-form__textarea">
-                                <textarea name="" id=""></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-form__button">
-                        <button class="btn">Оформить заказ</button>
-                        <div class="order-form__privacy">
-                            Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
-                            с <a href="">Политикой конфиденциальности</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+        <div class="textpage__body stext fix-height">
+            <h1>Оглавление</h1>
+            <h2>Верстка страниц</h2>
+            <ul>
+                <li><a href="/index.html">Главная страница</a></li>
+                <li><a href="/catalog.html">Каталог</a></li>
+                <li><a href="/product.html">Карточка товара</a> всплывающее окно</li>
+                <li><a href="/cart.html">Корзина</a></li>
+                <li><a href="/contacts.html">Контакты</a></li>
+                <li><a href="/articles.html">Каталог статей</a></li>
+                <li><a href="/article.html">Карточка статьи</a></li>
+                <li><a href="/company.html">О компании</a> !!! преимущества поправить, проверить адаптив</li>
+                <li><a href="/text.html">Текстовая страница (доставка, ПК и т.д.</a></li>
+                <li><a href="/search.html">Результаты поиска</a></li>
+                <li><a href="/404.html">404</a></li>
+                <li><a href="/services.html">Услуги</a></li>
+            </ul>
+            <h2>Всплывающие окна</h2>
+            <ul>
+                <li><a href="#thankyou" data-fancybox="">Спасибо за Ваш заказ</a></li>
+                <li><a href="#oneclick">Купить в 1 клик</a></li>
+                <li><a href="#addproduct" data-fancybox="">Товар добавлен в корзину</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
         </div>
     </div>
 </div>
+
+
+<div style="display: none;">
+    <div id="thankyou" class="thankyou-popup">
+        <div class="thankyou-popup__header">
+            Спасибо за Ваш заказ!
+        </div>
+        <div class="thankyou-popup__body">
+            Наш менеджер свяжется с вами в течение <nobr>30 минут</nobr> в рабочее время.<br />
+            Мы работаем с понедельника по пятницу с 09.00 до 18.00.
+        </div>
+    </div>
+
+    <div id="addproduct" class="addproduct-popup">
+        <div class="addproduct-popup__text">
+            <div class="addproduct-popup__name">Стиральная машина Bosch Serie 2</div>
+            успешно добавлен(а) в корзину
+        </div>
+        <div class="addproduct-popup__actions">
+            <a href="" class="btn-o">Продолжить покупки</a>
+            <a href="" class="btn">Оформить заказ</a>
+        </div>
+    </div>
+</div>
+
 
 
 <div class="footer">

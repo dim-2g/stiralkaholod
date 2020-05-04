@@ -1,0 +1,103 @@
+//= include/header.html
+<div class="overlay-light"></div>
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__body">
+            <ul>
+                <li><a href="/menu.html">Главная страница</a></li>
+                <li><span>Полезное</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="articles">
+    <div class="container">
+        <div class="articles__body">
+            <h1>Полезные статьи</h1>
+            <div class="articles-meta">
+                <div class="articles-sort">
+                    Сортировать по
+                    <select name="" id="" class="styler">
+                        <option value="Популярности">популярности</option>
+                        <option value="Возрастанию цены">возрастанию цены</option>
+                        <option value="Убыванию цены">убыванию цены</option>
+                    </select>
+                </div>
+                <div class="catalog-filter catalog-filter-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 3H2L10 12.46V19L14 21V12.46L22 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="articles__box">
+                <div class="articles__items">
+                    <div class="articles__grid rows">
+
+                        <div class="articles__item">
+                            //= include/article-card-1.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-2.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-3.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-1.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-2.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-3.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-1.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-2.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-3.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-1.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-2.html
+                        </div>
+                        <div class="articles__item">
+                            //= include/article-card-3.html
+                        </div>
+
+                    </div>
+                    <button class="btn articles__more">Посмотреть еще</button>
+                </div>
+                <div class="catalog__sidebar">
+                    <a href="#" class="sidebar-close"></a>
+                    <div class="widget">
+                        <div class="widget__header">Категория</div>
+                        <div class="widget__body">
+                            <ul>
+                                <li><a href="#">Советы по подбору техники</a></li>
+                                <li><a href="#">Обзоры моделей</a></li>
+                                <li><a href="#">Разное</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+//= include/footer.html
+
+<!-- @if NODE_ENV='development' -->
+//= include/mediahelp.html
+<!-- @endif -->
