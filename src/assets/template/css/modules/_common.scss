@@ -15,7 +15,7 @@ body *{
 .container{
   padding: 0 15px;
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .phablet-container{
     width: 100%;
     padding: 0;
@@ -115,6 +115,8 @@ a{
 .topline{
   background: #F8F8F8;
   display: none;
+  position: relative;
+  z-index: 110;
   @media ($bp-larger-than-phablet) {
     display: block;
   }
@@ -189,10 +191,15 @@ a{
 .fixed-header{
   background-color: #fff;
   padding-bottom: 1px;
+  position: relative;
+
 }
 .header{
   position: relative;
+  //z-index: 110;
+  background-color: #fff;
   @media ($bp-larger-than-phablet) {
+    z-index: 110;
     padding-bottom: 2px;
     border-bottom: 1px solid #F8F8F8;
   }
@@ -221,6 +228,8 @@ a{
     width: 100%;
     background: #F8F8F8;
     height: 50px;
+    position: relative;
+    z-index: 110;
     @media ($bp-larger-than-phablet) {
       height: auto;
       background: #fff;
@@ -245,6 +254,7 @@ a{
     align-items: center;
     justify-content: space-between;
     height: 50px;
+    position: relative;
     @media ($bp-larger-than-phablet) {
       height: auto;
       width: auto;
@@ -270,6 +280,10 @@ a{
   }
   &__search{
     //display: none;
+    height: 35px;
+    width: 144px;
+    flex-shrink: 0;
+    position: relative;
     @media ($bp-larger-than-phablet) {
       display: block;
     }
@@ -317,10 +331,128 @@ a{
     border-radius: 1px;
     width: 100%;
     display: block;
-    background: #fff;
+    background: transparent;
   }
-  &__center{
+  &__line-one{
+    transition: $anim;
+    position: relative;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 51%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(0);
+      transform-origin: 100% 0;
+      transition: $cubic;
+    }
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 50%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(0);
+      transform-origin: 0 0;
+      transition: $cubic;
+    }
+  }
+  &__line-two{
     margin: 4px 0;
+    transition: $anim;
+    position: relative;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 51%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(0);
+      transform-origin: 100% 0;
+      transition: $cubic;
+    }
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 50%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(0);
+      transform-origin: 0 0;
+      transition: $cubic;
+    }
+  }
+  &__line-three{
+    transition: $anim5;
+    position: relative;
+    opacity: 1;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 51%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(0);
+      transform-origin: 100% 0;
+      transition: $cubic;
+    }
+    &:after{
+      content: "";
+      display: inline-block;
+      width: 50%;
+      background: #fff;
+      height: 2px;
+      border-radius: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(0);
+      transform-origin: 0 0;
+      transition: $cubic;
+    }
+  }
+}
+body.show-slide-menu{
+  .burger{
+    &__line-one{
+      &:before{
+        transform: rotate(-45deg);
+      }
+      &:after{
+        transform: rotate(45deg);
+      }
+    }
+    &__line-two{
+      &:before{
+        transform: rotate(-45deg);
+      }
+      &:after{
+        transform: rotate(45deg);
+      }
+    }
+    &__line-three{
+      opacity: 0;
+    }
   }
 }
 .cart-top{
@@ -341,11 +473,21 @@ a{
   &:hover{
     border-color: $red;
     background: $red;
+    svg{
+      vertical-align: top;
+      path{
+        stroke: #fff;
+        @media ($bp-larger-than-phablet) {
+          stroke: #fff;
+        }
+      }
+    }
   }
   svg{
     vertical-align: top;
     path{
       stroke: #0088CC;
+      transition: $cubic;
       @media ($bp-larger-than-phablet) {
         stroke: #fff;
       }
@@ -394,12 +536,17 @@ a{
   flex-shrink: 0;
   display: flex;
   padding-right: 35px;
-  position: relative;
+  //position: relative;
+  transition: $anim5;
+  top: 0;
+  right: 0;
+  position: absolute;
   @media ($bp-larger-than-tablet) {
     width: 144px;
   }
   form{
     display: flex;
+    width: 100%;
   }
   input[type="text"] {
     width: 100%;
@@ -410,6 +557,7 @@ a{
     line-height: 12px;
     color: #888888;
     padding: 4px 12px;
+    max-width: none;
   }
   button{
     background: #fff;
@@ -430,15 +578,32 @@ a{
     &:hover{
       border-color: $red;
       background: $red;
+      svg{
+        path{
+          stroke: #fff;
+          @media ($bp-larger-than-phablet) {
+            stroke: #fff;
+          }
+        }
+      }
     }
   }
   svg{
     path{
+      transition: $cubic;
       stroke: #0088CC;
       @media ($bp-larger-than-phablet) {
         stroke: #fff;
       }
     }
+  }
+}
+body.show-search{
+  .search{
+    position: absolute;
+    right: 0;
+    width: 700px;
+    top: 0;
   }
 }
 .owl-nav *{
@@ -1123,5 +1288,142 @@ h1{
     img{
 
     }
+  }
+}
+
+.mobile-menu{
+  position: absolute;
+  z-index: 100;
+  background-color: #0088CC;
+  transform: translateY(-100%);
+  top: 50px;
+  left: 0;
+  right: 0;
+  transition: $cubic;
+  @media ($bp-larger-than-phablet) {
+    top: 86px;
+    //left: 15px;
+    //right: 15px;
+  }
+  &__grid{
+    padding: 21px 25px 35px;
+    max-width: 327px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__item{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    +.mobile-menu__item{
+      margin-top: 9px;
+    }
+    a{
+      display: flex;
+      height: 35px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      line-height: 17px;
+      color: #fff;
+      background-color: #0088CC;
+      transition: $cubic;
+      &:hover{
+        text-decoration: none;
+        background: $red;
+      }
+    }
+    &--parent{
+      &.open{
+        .mobile-menu__arrow:before{
+          top: 3px;
+          left: 0;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+  &__arrow{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 9px;
+    flex-shrink: 0;
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      position: absolute;
+      top: -3px;
+      left: 0;
+      //transition: $cubic02;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+  &__childs{
+    display: none;
+  }
+  &__child{
+    border-top: 1px solid #0088CC;
+    a{
+      display: flex;
+      height: 35px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 14px;
+      line-height: 17px;
+      color: #0088CC;
+      background-color: #fff;
+      transition: $cubic;
+      &:hover{
+        text-decoration: none;
+        background: $red;
+        color: #fff;
+      }
+    }
+  }
+}
+
+body.show-slide-menu{
+  .mobile-menu{
+    transform: translateY(0);
+  }
+}
+
+.goto-top{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #0088CC;
+  text-align: center;
+  font-size: 0;
+  position: fixed;
+  bottom: 152px;
+  right: 30px;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 14px;
+  transition: $cubic;
+  @media ($bp-larger-than-desktopfullhd) {
+    right: 206px;
+    bottom: 152px;
+  }
+  &--visible{
+    visibility: hidden;
+    opacity: 0;
+    @media ($bp-larger-than-phablet) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &:hover{
+    background-color: $red;
   }
 }
