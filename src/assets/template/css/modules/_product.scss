@@ -1,5 +1,16 @@
 .product{
   margin-bottom: 22px;
+  @media ($bp-larger-than-phablet) {
+    margin-bottom: 12px;
+  }
+  &__body{
+    h1{
+      margin-bottom: 14px;
+      @media ($bp-larger-than-phablet) {
+        margin-bottom: 36px;
+      }
+    }
+  }
   &__grid{
     display: flex;
     //flex-direction: column;
@@ -26,6 +37,7 @@
     }
     @media ($bp-larger-than-desktop) {
       width: 320px;
+      max-width: none;
     }
     @media ($bp-larger-than-desktophd) {
       width: 367px;
@@ -76,6 +88,7 @@
     }
     @media ($bp-larger-than-desktop) {
       width: 320px;
+      max-width: none;
     }
     @media ($bp-larger-than-desktophd) {
       width: 367px;
@@ -91,11 +104,46 @@
 }
 .product-gallery{
   &__item{
-    height: 367px;
+    height: 315px;
     background-position: center;
     background-size: cover;
     width: 100%;
     border-radius: 10px;
+    @media ($bp-larger-than-phablet) {
+      height: 367px;
+    }
+  }
+  .owl-dots{
+    text-align: center;
+    font-size: 0;
+    position: absolute;
+    bottom: 11px;
+    width: 100%;
+    @media ($bp-larger-than-phablet) {
+      bottom: 10px;
+    }
+  }
+  button.owl-dot{
+    span{
+      width: 8px;
+      height: 8px;
+      box-sizing: border-box;
+      background: #FFFFFF;
+      border: 1px solid $red;
+      display: block;
+      margin: 0 2px;
+      border-radius: 50%;
+      @media ($bp-larger-than-phablet) {
+        width: 10px;
+        height: 10px;
+        margin: 0 7px;
+      }
+    }
+    &.active{
+      span{
+        background-color: #EF5C2E;
+      }
+    }
   }
 }
 
@@ -397,7 +445,7 @@
   }
   &__body{
     @media ($bp-larger-than-phablet) {
-      margin-bottom: 18px;
+      //margin-bottom: 18px;
     }
   }
   &__box{
@@ -410,7 +458,7 @@
   }
   &__grid{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-left: -10px;
     margin-right: -10px;
     flex-wrap: wrap;
@@ -438,3 +486,4 @@
     padding-bottom: 0;
   }
 }
+

@@ -72,6 +72,9 @@ a{
     text-decoration: underline;
   }
 }
+button{
+  outline: none;
+}
 .btn{
   background: #0088CC;
   border-radius: 10px;
@@ -176,7 +179,7 @@ a{
     margin: 0;
     padding: 0;
     + li {
-      margin-left: 23px;
+      margin-left: 15px;
     }
   }
   a{
@@ -274,6 +277,7 @@ a{
   &__menu{
     width: 100%;
     display: none;
+    transition: $anim5;
     @media ($bp-larger-than-desktop) {
       display: block;
     }
@@ -281,11 +285,14 @@ a{
   &__search{
     //display: none;
     height: 35px;
-    width: 144px;
     flex-shrink: 0;
     position: relative;
     @media ($bp-larger-than-phablet) {
+      width: 144px;
       display: block;
+    }
+    @media ($bp-larger-than-tablet) {
+      z-index: 120;
     }
   }
   &__cart{
@@ -300,9 +307,24 @@ a{
   &__contacts{
     display: block;
     width: 100%;
+    padding-right: 35px;
     @media ($bp-larger-than-phablet) {
       display: none;
+      padding-right: 0;
     }
+  }
+}
+body.fixed{
+  padding-top: 115px;
+  @media ($bp-larger-than-phablet) {
+    padding-top: 86px;
+  }
+  .fixed-header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
   }
 }
 .header-phone{
@@ -502,7 +524,7 @@ body.show-slide-menu{
     box-sizing: border-box;
     border-radius: 20px;
     font-size: 10px;
-    line-height: 12px;
+    line-height: 11px;
     color: #242424;
     width: 18px;
     height: 12px;
@@ -537,10 +559,13 @@ body.show-slide-menu{
   display: flex;
   padding-right: 35px;
   //position: relative;
-  transition: $anim5;
+  transition: $cubic;
   top: 0;
   right: 0;
   position: absolute;
+  @media ($bp-larger-than-phablet) {
+    width: 144px;
+  }
   @media ($bp-larger-than-tablet) {
     width: 144px;
   }
@@ -599,11 +624,35 @@ body.show-slide-menu{
   }
 }
 body.show-search{
+  .header__search{
+    z-index: 120;
+  }
   .search{
     position: absolute;
     right: 0;
-    width: 700px;
     top: 0;
+    width: 240px;
+    @media ($bp-larger-than-iphone5) {
+      width: 270px;
+    }
+    @media ($bp-larger-than-iphone6) {
+      width: 300px;
+    }
+    @media ($bp-larger-than-phablet) {
+      width: 150px;
+    }
+    @media ($bp-larger-than-tablet) {
+      width: 390px;
+    }
+    @media ($bp-larger-than-desktop) {
+      width: 650px;
+    }
+    @media ($bp-larger-than-desktophd) {
+      width: 700px;
+    }
+  }
+  .header__menu{
+    opacity: 0;
   }
 }
 .owl-nav *{
@@ -722,12 +771,19 @@ body.show-search{
 }
 
 .categories{
-  padding: 21px 0;
+  padding: 16px 0 0;
+  @media ($bp-larger-than-phablet) {
+    padding: 21px 0;
+  }
   &__header{
     font-size: 18px;
     line-height: 22px;
     text-align: center;
     margin-bottom: 26px;
+    display: none;
+    @media ($bp-larger-than-phablet) {
+      display: block;
+    }
   }
   &__grid{
     display: flex;
@@ -813,6 +869,7 @@ body.show-search{
     flex-shrink: 0;
     margin-bottom: 30px;
     @media ($bp-larger-than-desktop) {
+      padding-left: 12px;
       width: 422px;
       margin-bottom: 0;
     }
@@ -822,9 +879,10 @@ body.show-search{
     justify-content: space-between;
     width: 450px;
     @media ($bp-larger-than-desktop) {
-      justify-content: space-around;
+      //justify-content: space-around;
+      justify-content: flex-start;
       padding-left: 20px;
-      padding-right: 20px;
+      //padding-right: 20px;
       width: 100%;
     }
   }
@@ -844,6 +902,13 @@ body.show-search{
     margin-bottom: 16px;
   }
   &__catalog-menu{
+    @media ($bp-larger-than-desktop) {
+      margin-left: 68px;
+      width: 290px;
+    }
+    @media ($bp-larger-than-desktophd) {
+      margin-left: 148px;
+    }
     ul{
       margin: 0;
       padding: 0;
@@ -999,7 +1064,7 @@ body.show-search{
 }
 
 .footer-mobile {
-  padding: 8px 0 14px;
+  padding: 8px 0 12px;
   background: #333333;
   display: block;
   @media ($bp-larger-than-phablet) {
@@ -1010,7 +1075,7 @@ body.show-search{
     margin-bottom: 8px;
   }
   &__menu{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     ul{
       margin: 0;
       padding: 0;
@@ -1106,7 +1171,7 @@ body.show-search{
   }
   &__copyright{
     white-space: nowrap;
-    margin: 2px;
+    margin: 0;
     @media ($bp-larger-than-tablet) {
       margin: 0;
     }
@@ -1114,7 +1179,7 @@ body.show-search{
   &__menu{
     width: 100%;
     text-align: center;
-    margin: 2px;
+    margin: 0;
     @media ($bp-larger-than-tablet) {
       text-align: left;
       margin: 0;
@@ -1152,7 +1217,7 @@ body.show-search{
 
 
 .breadcrumbs{
-  padding: 13px 0 12px;
+  padding: 2px 0 11px;
   display: none;
   @media ($bp-larger-than-phablet) {
     display: block;
@@ -1221,7 +1286,25 @@ h1{
 
 .maintext{
   padding-top: 12px;
-  padding-bottom: 22px;
+  padding-bottom: 4px;
+  @media ($bp-larger-than-phablet) {
+    padding-bottom: 23px;
+  }
+  h1{
+    margin-bottom: 12px;
+    @media ($bp-larger-than-phablet) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.maintext-bottom{
+  padding-top: 5px;
+  padding-bottom: 7px;
+  @media ($bp-larger-than-phablet) {
+    padding-bottom: 15px;
+    padding-top: 14px;
+  }
   h1{
     margin-bottom: 15px;
   }
@@ -1286,7 +1369,7 @@ h1{
       border: 1px solid $red;
     }
     img{
-
+      max-width: 100%;
     }
   }
 }
@@ -1315,6 +1398,9 @@ h1{
     border: 1px solid #fff;
     border-radius: 10px;
     overflow: hidden;
+    opacity: 0;
+    transition: $anim5;
+    transition-delay: 0.5s;
     +.mobile-menu__item{
       margin-top: 9px;
     }
@@ -1395,6 +1481,9 @@ body.show-slide-menu{
   .mobile-menu{
     transform: translateY(0);
   }
+  .mobile-menu__item{
+    opacity: 1;
+  }
 }
 
 .goto-top{
@@ -1425,5 +1514,54 @@ body.show-slide-menu{
   }
   &:hover{
     background-color: $red;
+  }
+}
+
+.mse2-ac-item{
+  font-family: Montserrat;
+  &__grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__image{
+    width: 50px;
+    flex-shrink: 0;
+    display: none;
+    @media ($bp-larger-than-tablet) {
+      display: block;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__pagetitle{
+    width: 100%;
+    font-size: 12px;
+    padding: 0 0 15px 0;
+    @media ($bp-larger-than-tablet) {
+      padding: 0 25px;
+      font-size: 14px;
+    }
+  }
+  &__price{
+    font-weight: bold;
+    font-size: 12px;
+    white-space: nowrap;
+    @media ($bp-larger-than-tablet) {
+      font-size: 14px;
+    }
+  }
+}
+.ui-menu-divider{
+  + .ui-menu-divider{
+    display: none;
+  }
+}
+.ui-widget.ui-widget-content{
+  visibility: hidden;
+  border: 0 none !important;
+  @media ($bp-larger-than-tablet) {
+    visibility: visible;
   }
 }

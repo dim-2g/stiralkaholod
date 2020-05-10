@@ -42,7 +42,10 @@
 
 body{
   &.compensate-for-scrollbar{
-    overflow: auto;
+    //overflow: auto;
+    .fixed-header{
+      margin-right: 17px;
+    }
   }
 }
 
@@ -305,5 +308,69 @@ body{
         color: $red;
       }
     }
+  }
+}
+
+
+.fancybox-content {
+  &.params-popup {
+    width: 100%;
+    max-width: 600px;
+    padding: 28px 48px 33px;
+    background: #fff;
+    border-radius: 10px;
+    @media ($bp-larger-than-phablet) {
+    }
+  }
+}
+
+.params-popup{
+  &__header{
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+  }
+  &__body{
+    p{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.ajax_form{
+  input[type="text"] {
+    &.error{
+      border: 1px solid $red !important;
+    }
+  }
+}
+#msOrder{
+  input[type="text"] {
+    &.error{
+      border: 1px solid $red !important;
+    }
+  }
+}
+
+.jGrowl{
+  z-index: 99999 !important;
+  .af-message-error{
+    background-color: $red !important;
+  }
+  .ms2-message-error{
+    background-color: $red !important;
+  }
+  .jGrowl-notification{
+    border-radius: 0;
+    min-height: auto;
+    opacity: 1;
+  }
+  .ms2-message-success{
+    display: none !important;
+  }
+  .jGrowl-closer{
+    display: none !important;
   }
 }

@@ -2,17 +2,26 @@
   padding-bottom: 8px;
   padding-top: 22px;
   @media ($bp-larger-than-phablet) {
+    padding-top: 28px;
     padding-bottom: 20px;
   }
   &__header{
     font-size: 18px;
-    line-height: 22px;
+    line-height: 18px;
     color: #242424;
     text-align: center;
   }
+  &__body{
+    + .products__body{
+      padding-top: 12px;
+      @media ($bp-larger-than-phablet) {
+        padding-top: 30px;
+      }
+    }
+  }
   &__info{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     a{
       font-size: 12px;
       line-height: 15px;
@@ -47,7 +56,7 @@
 
     &:nth-child(2){
       display: none;
-      @media ($bp-larger-than-iphone5) {
+      @media ($bp-larger-than-iphone6) {
         display: block;
       }
     }
@@ -225,7 +234,10 @@
       }
     }
     br{
-      display: inline;
+      display: none;
+      @media ($bp-larger-than-iphone6) {
+        display: inline;
+      }
       @media ($bp-larger-than-phablet) {
         display: none;
       }
@@ -234,9 +246,12 @@
   &__buy{
     .btn{
       flex-shrink: 0;
-      width: 78px;
+      width: 93px;
       font-size: 12px;
       padding: 0 5px;
+      @media ($bp-larger-than-iphone6) {
+        width: 78px;
+      }
       @media ($bp-larger-than-phablet) {
         width: 93px;
         padding: 0 8px;
@@ -246,7 +261,7 @@
 }
 
 .catalog{
-  padding-top: 14px;
+  padding-top: 0;
   padding-bottom: 20px;
   @media ($bp-larger-than-phablet) {
     padding-top: 22px;
@@ -292,13 +307,14 @@
     transform: translateX(100%);
     //width: 0;
     //overflow: hidden;
-    z-index: 100;
+    z-index: 99;
     @media ($bp-larger-than-desktop) {
       width: 270px;
       margin-left: 20px;
       position: relative;
       opacity: 1;
       transform: translateX(0);
+      z-index: 1;
     }
     &.open{
       width: 270px;
@@ -313,6 +329,9 @@
     margin-left: -10px;
     margin-right: -10px;
     flex-wrap: wrap;
+    @media ($bp-larger-than-phablet) {
+      justify-content: flex-start;
+    }
   }
   &__items{
     width: 100%;
@@ -493,11 +512,9 @@ $checkboxSizeAgreeMobile: 14px;
     margin-right: 8px;
     cursor: pointer;
     position: absolute;
-    top: 5px;
+    top: 2px;
     @media($bp-larger-than-mobile) {
       margin-right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
       width: $checkboxSizeAgree;
       height: $checkboxSizeAgree;
       line-height: $checkboxSizeAgree;
@@ -558,6 +575,11 @@ $checkboxSizeAgreeMobile: 14px;
       border: 0 none;
       padding-left: 13px;
       padding-right: 31px;
+      max-width: 150px;
+      @media ($bp-larger-than-iphone6) {
+        max-width: none;
+        min-width: 185px;
+      }
       &:active{
         background: #0088CC;
         box-shadow: none;

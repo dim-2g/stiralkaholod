@@ -67,8 +67,8 @@
                     </div>
 
                 </div>
-                <div class="contacts__map">
-                    <img src="/assets/template/images/map.jpg" alt="">
+                <div class="contacts__map" id="map">
+                    <!--<img src="/assets/template/images/map.jpg" alt="">-->
                 </div>
             </div>
             <div class="contacts__form">
@@ -119,6 +119,19 @@
 </div>
 
 //= include/footer.html
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var mapData = [{
+        id: 'map',
+        coords: [59.985399, 30.334481],
+        header: 'Санкт-Петербург, Б.Сампсониевский пр., д. 82, офис 1 ',
+        center: [59.985399, 30.334481],
+        zoom: 16,
+    }];
+</script>
+<script src="/assets/template/js/map-contacts.js?v=1"></script>
+
 
 <!-- @if NODE_ENV='development' -->
 //= include/mediahelp.html

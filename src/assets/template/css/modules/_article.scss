@@ -103,6 +103,8 @@
     margin-bottom: 2px;
     @media ($bp-larger-than-phablet) {
       margin-left: 60px;
+      margin-top: 13px;
+      margin-bottom: 13px;
     }
     li{
       //margin-bottom: 4px;
@@ -119,7 +121,7 @@
       + li {
         margin-top: 15px;
         @media ($bp-larger-than-phablet) {
-          margin-bottom: 2px;
+          margin-top: 2px;
         }
       }
     }
@@ -157,6 +159,10 @@
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: -3px;
+    margin-top: -4px;
+    @media ($bp-larger-than-phablet) {
+      margin-top: 5px;
+    }
   }
 }
 

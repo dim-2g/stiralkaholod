@@ -1,18 +1,20 @@
-.textblock{
-  margin-bottom: 14px;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  @media ($bp-larger-than-tablet) {
-    margin-bottom: 30px;
-  }
-  p{
-    font-size: 12px;
-    line-height: 25px;
-    text-align: justify;
-    color: #000000;
+.about{
+  &__body{
+    margin-bottom: 20px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
     @media ($bp-larger-than-tablet) {
-      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: 12px;
+      line-height: 25px;
+      text-align: justify;
+      color: #000000;
+      @media ($bp-larger-than-tablet) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -27,7 +29,7 @@
       padding: 15px;
     }
     @media ($bp-larger-than-tablet) {
-      padding: 15px 20px 43px;
+      padding: 15px 20px 39px;
     }
   }
   &__header{
@@ -118,5 +120,18 @@
         display: inline-block;
       }
     }
+  }
+}
+
+.company-advantages{
+  margin-bottom: 8px;
+  @media ($bp-larger-than-phablet) {
+    margin-bottom: 24px;
+  }
+}
+.about-brands{
+  padding-bottom: 10px;
+  @media ($bp-larger-than-phablet) {
+    padding-bottom: 34px;
   }
 }

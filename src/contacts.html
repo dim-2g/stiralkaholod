@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/assets/template/css/main.css">
 
 </head>
-<body class="">
+<body class="fixed">
 <div class="fixed-header">
     <div class="topline">
         <div class="container">
@@ -66,7 +66,7 @@
                         <div class="header-worktime">с 9.00 до 18.00 (пн-пт)</div>
                     </div>
                     <div class="header__search">
-                        <div class="search">
+                        <div class="search" data-width="680px">
                             <form action="">
                                 <input type="text" placeholder="Введите запрос">
                                 <button>
@@ -195,8 +195,8 @@
                     </div>
 
                 </div>
-                <div class="contacts__map">
-                    <img src="/assets/template/images/map.jpg" alt="">
+                <div class="contacts__map" id="map">
+                    <!--<img src="/assets/template/images/map.jpg" alt="">-->
                 </div>
             </div>
             <div class="contacts__form">
@@ -392,8 +392,10 @@
     </svg>
 </a>
 
+<!--
 <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
 <link rel="stylesheet" type="text/css" href="/assets/template/vendor/slick/slick-theme.css"/>
+-->
 <link rel="stylesheet" href="/assets/template/vendor/fancybox/jquery.fancybox.min.css" />
 <link href="/assets/template/vendor/formstyler/jquery.formstyler.css" rel="stylesheet" />
 <link href="/assets/template/vendor/formstyler/jquery.formstyler.theme.css" rel="stylesheet" />
@@ -408,6 +410,19 @@
 <script src="/assets/template/js/scripts.js"></script>
 </body>
 </html>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script>
+    var mapData = [{
+        id: 'map',
+        coords: [59.985399, 30.334481],
+        header: 'Санкт-Петербург, Б.Сампсониевский пр., д. 82, офис 1 ',
+        center: [59.985399, 30.334481],
+        zoom: 16,
+    }];
+</script>
+<script src="/assets/template/js/map-contacts.js?v=1"></script>
+
 
 <div class="bp-larger-than">
     <div class="bp-larger-than-first">

@@ -12,18 +12,8 @@ $(function() {
     $('.toggle-menu-js').on('click', function (e) {
         e.preventDefault();
         if ($('body').hasClass('show-slide-menu')) {
-            /*
-            $('.mobile-menu').slideUp(300, function() {
-                $('.mobile-menu').stop(true, true);
-            });
-             */
             $('body').removeClass('show-slide-menu')
         } else {
-            /*
-            $('.mobile-menu').slideDown(300, function() {
-                $('.mobile-menu').stop(true, true);
-            });
-             */
             $('body').addClass('show-slide-menu')
         }
     });
@@ -48,11 +38,30 @@ $(function() {
     //разворачивание поиска при фокусе на нем
     $('.search input').on('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         if ($('body').hasClass('show-search')) {
-            $('body').removeClass('show-search')
+            //$('body').removeClass('show-search')
         } else {
             $('body').addClass('show-search')
         }
+    });
+
+    //при клике на кнопку поиска, проверяем, что оно развернуто и только после этого можно сабмитеть
+    $('.search button').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        //если развернуто
+        if ($('body').hasClass('show-search')) {
+            console.log('Сабмит формы поиска');
+            $(this).parents('form').trigger('submit');
+        } else {
+            $('body').addClass('show-search')
+        }
+    });
+
+    //сбрасываем отображение поиска, при клике на любом элементе, кроме поиска
+    $('body').on('click', function() {
+        $('body').removeClass('show-search')
     });
 
     //сворачивание и разворачивание группы в фильтре
@@ -82,6 +91,30 @@ $(function() {
         $(this).closest('li').toggleClass('open');
     });
 
+    //применение сортировки в фильтре при выборе в select
+    $('body').on('change', '.mse2_sort_select', function(e){
+        e.preventDefault();
+        mse2Config.sort = $(this).val();
+        mSearch2.submit();
+        return false;
+    });
+
+    //быстрая фильтрация в фильтре бренда
+    $('body').on('keyup', '[name="filter_brand"]', function() {
+        var input = $(this);
+        var inputText = input.val().toLowerCase().trim();
+        var group = input.parents('.filter__group');
+        group.find('.filter__item').each(function() {
+            var thisBrandName = $(this).find('.label').text().toLowerCase().trim();
+            console.log(thisBrandName.indexOf(inputText));
+            if (thisBrandName.indexOf(inputText) == -1) {
+                $(this).hide();
+            } else {
+                $(this).show();
+            }
+        });
+    });
+
     //плавный переход по контенту
     $('body').on('click', '[data-goto]', function(e) {
         e.preventDefault();
@@ -90,6 +123,7 @@ $(function() {
         var selector = $(this).attr('data-goto');
         $('html, body').animate({ scrollTop: $(selector).offset().top + hx}, 1200);
     });
+
     //обрабатываем событие клика по табу
     $('[data-tab]').click(function(e){
         e.preventDefault();
@@ -108,13 +142,22 @@ $(function() {
         });
         return false;
     });
+
+    //сабмит форм при клике по ссылкам с аттрибутом data-ms2form-submit
+    $('body').on('click', '[data-ms2form-submit]', function(e) {
+        e.preventDefault();
+        var parent = $(this).attr('data-ms2form-submit');
+        $(this).closest(parent).find('form.ms2_form').trigger('submit');
+    });
+
     //инициализация верхнего слайдера
     initMainSlider();
-    //инициализация слайдера Акций
+    //инициализация слайдера у товара
+    initProductSlider();
     //инициализация слайдера похожих статей
     initRelatedArticles();
     //инициализация всех табов
-    initXtab();
+    //initXtab();
     //установка высоты плавающего хедера
     setHeaderHeight();
     //установка высоты страницы 404
@@ -171,8 +214,78 @@ $(function() {
         }, 700);
     });
 
+    $('body').on('change', '.service-attach input[type="file"]', function() {
+        var file = $(this).val();
+        file = file.replace(/\\/g, "/").split('/').pop();
+        console.log('file ' + file);
+        $(this).parents('.service-attach').find('.service-attach__text').text(file);
+    });
+
+    //купить в 1 клик
+    $('body').on('click', '[href="#oneclick"]', function(e) {
+        e.preventDefault();
+        var productId = $(this).attr('data-product-id');
+        setOneClickData($(this));
+        $.fancybox.open({
+            src  : $(this).attr('href'),
+            type : 'inline',
+            smallBtn : false,
+            opts : {
+                afterLoad : function(instance, current) {
+                    oneClickInit(productId);
+                }
+            }
+        });
+    });
+
+    //переход на страницу об успешном заказе
+    $(document).on('af_complete', function(event, response) {
+        if (response.form.hasClass('af_quick_buy')) {
+            if( response.success ) {
+                document.location.href = response.data.order_url;
+            }
+        }
+    });
+
+    //устанавливаем заголовок модального окна
+    $('body').on('click', '[data-product-name]', function() {
+        var productName = $(this).attr("data-product-name");
+        $(".addproduct-popup__name").text(productName);
+    });
+
+
 });
 
+var oneClickInit = function(id) {
+    $.get(
+        "/",
+        { ms2_action: "cart/clean" },
+        function(data){
+            var jo = $.parseJSON(data);
+            if(jo.success){
+                $("#msMiniCart").removeClass('full');
+                //$('.product-info__buttons .ms2_form').trigger('submit');
+                $.post({
+                    url: "/assets/components/minishop2/action.php",
+                    data: "id=" + id + "&count=1&ms2_action=cart/add&ctx=web",
+                    success: function(msg){
+                    }
+                });
+            }
+        }
+    );
+};
+
+var setOneClickData = function(elem) {
+    var productId = elem.attr('data-product-id');
+    var productName = elem.attr('data-product-name');
+    var productImage = elem.attr('data-product-image');
+
+    $('.oneclick-popup__name').text(productName);
+    $('.oneclick-form [name="product_id"]').val(productId);
+    $('.oneclick-form [name="product_name"]').val(productName);
+    $('.oneclick-popup__image').css({ "background-image": "url('"+productImage+"')" });
+}
 
 var initXtab = function() {
     setTimeout(function() {
@@ -189,6 +302,23 @@ var initMainSlider = function() {
         loop: true,
         margin: 20,
         responsiveClass:true,
+        responsive:{
+            0:{
+                items: 1,
+                nav: false,
+                dots: true,
+            }
+        }
+    });
+};
+
+var initProductSlider = function () {
+    var selector = '.product-gallery-js';
+    $(selector).owlCarousel({
+        loop: true,
+        margin: 0,
+        responsiveClass:true,
+        //autoWidth:true,
         responsive:{
             0:{
                 items: 1,
@@ -292,3 +422,4 @@ $(window).on("load",function(){
         theme: "dark"
     });
 });
+

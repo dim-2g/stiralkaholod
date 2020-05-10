@@ -1,15 +1,15 @@
 .search-page{
-  padding-top: 14px;
+  //padding-top: 14px;
   padding-bottom: 20px;
   @media ($bp-larger-than-phablet) {
-    padding-top: 22px;
+    //padding-top: 22px;
   }
   h1, .header1{
     margin-bottom: 18px;
     font-size: 18px;
     line-height: 22px;
     @media ($bp-larger-than-phablet) {
-      margin-bottom: 20px;
+      margin-bottom: 12px;
     }
   }
   &__header{
@@ -39,14 +39,17 @@
   }
   &__grid{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: -10px;
     margin-right: -10px;
     flex-wrap: wrap;
+    @media ($bp-larger-than-iphone6) {
+      justify-content: flex-start;
+    }
   }
   &__item{
     padding: 0 10px 20px;
-    @media ($bp-larger-than-iphone5) {
+    @media ($bp-larger-than-iphone6) {
       width: 50%;
     }
     @media ($bp-larger-than-tablet) {
@@ -117,7 +120,7 @@
   }
   svg{
     path{
-      stroke: #fff;
+      //stroke: #fff;
     }
   }
 }

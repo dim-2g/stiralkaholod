@@ -1,8 +1,8 @@
 .articles{
-  padding-top: 14px;
+  padding-top: 0;
   padding-bottom: 20px;
   @media ($bp-larger-than-phablet) {
-    padding-top: 22px;
+    padding-top: 0;
   }
   h1{
     margin-bottom: 10px;
@@ -47,12 +47,13 @@
     transform: translateX(100%);
     //width: 0;
     //overflow: hidden;
-    z-index: 100;
+    z-index: 99;
     @media ($bp-larger-than-desktop) {
       margin-left: 20px;
       position: relative;
       opacity: 1;
       transform: translateX(0);
+      z-index: 1;
     }
     &.open{
       width: 270px;

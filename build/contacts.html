@@ -4,666 +4,390 @@
     <meta charset="utf-8">
     <title>Главная страница</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet"-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/template/css/app.min.css?v=2">
 </head>
-<body class="">
-
+<body class="fixed">
+<div class="fixed-header">
     <div class="topline">
         <div class="container">
-            <div class="topline__grid topline__grid--desktop">
+            <div class="topline__grid">
                 <ul class="topline-menu">
-                    <li><a href="#">Автопарк</a></li>
+                    <li><a href="#">Услуги</a></li>
                     <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Полезное</a></li>
                 </ul>
-            </div>
-            <div class="topline__grid topline__grid--mobile">
-                <div class="topline-city">
-                    <span class="topline-city__marker"></span>
-                    <a href="#">Санкт-Петербург</a>
+                <div class="topline__address">
+                    Б.Сампсониевский, д.82,офис 1  с 9:00 до 18: 00 (пн-пт)
                 </div>
-                <ul class="topline-menu">
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+                <div class="topline__email">
+                    <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
+                </div>
+                <div class="topline__phone">
+                    <a href="tel:8812999-99-99">8 (812) 999-99-99</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="fixed-header-box">
-        <div class="fixed-header">
-            <div class="header">
-                <div class="container">
-                    <div class="header__grid">
-                        <div class="header__logo">
-                            <a href="/"><img src="/assets/template/images/logo.png" alt=""></a>
+    <div class="header">
+        <div class="container phablet-container">
+            <div class="header__grid">
+                <div class="header__left phablet-container__inside">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="/assets/template/images/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="header__burger toggle-menu-js">
+                        <a href="#" class="burger">
+                            <span class="burger__line-one"></span>
+                            <span class="burger__line-two"></span>
+                            <span class="burger__line-three"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__right phablet-container__inside">
+                    <div class="header__menu">
+                        <ul class="menu-top">
+                            <li><a href="#">Стиральные машины</a></li>
+                            <li><a href="#">Плиты</a></li>
+                            <li><a href="#">Холодильники</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__contacts">
+                        <div class="header-phone">8 (812) 999-99-99</div>
+                        <div class="header-worktime">с 9.00 до 18.00 (пн-пт)</div>
+                    </div>
+                    <div class="header__search">
+                        <div class="search" data-width="680px">
+                            <form action="">
+                                <input type="text" placeholder="Введите запрос">
+                                <button>
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.5 17.5L13.875 13.875" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </form>
                         </div>
-                        <div class="header__slogan">
-                            Вывоз мусора<br />
-                            в Санкт-Петербурге<br />
-                            и Ленинградской области
-                        </div>
-                        <div class="header__phones">
-                            <div class="header-phone">
-                                <a href="tel:8 (812) 920-38-54">8 (812) 920-38-54</a>
-                            </div>
-                            <div class="header-worktime">с 8.00 до 22.30</div>
-                        </div>
-                        <div class="header__emails">
-                            <div class="header-email">
-                                <a href="mailto:zakaz@hlamknam.ru">zakaz@hlamknam.ru</a>
-                            </div>
-                            <div class="header-email__hint">круглосуточно</div>
-                        </div>
-                        <div class="header__callback">
-                            <a class="btn btn-o" href="#callback" data-fancybox="">Заказать звонок</a>
-                        </div>
-                        <div class="header__burger toggle-menu">
-                            <a href="#" class="burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                    </div>
+                    <div class="header__cart">
+                        <div id="msMiniCart" class="cart-top">
+                            <a href="#">
+                                <div class="count">2</div>
+                                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 18.333a.833.833 0 100-1.666.833.833 0 000 1.666zM16.667 18.333a.833.833 0 100-1.666.833.833 0 000 1.666zM.833.833h3.334L6.4 11.992a1.666 1.666 0 001.667 1.341h8.1a1.666 1.666 0 001.666-1.341L19.167 5H5"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h20v20H0z"/></clipPath></defs></svg>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="top-menu">
-                <div class="container">
-                    <div class="top-menu__grid">
-                        <ul class="top-nav">
-                            <li><a href="#">Вывоз мусора</a></li>
-                            <li class="has-child"><a href="#">Бесплатный вывоз</a>
-                                <ul>
-                                    <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Вывоз холодильников</a></li>
-                                    <li><a href="#">Вывоз стиральных машин</a></li>
-                                    <li><a href="#">Вывоз посудомоечных машин</a></li>
-                                    <li><a href="#">Вывоз кухонных плит</a></li>
-                                    <li><a href="#">Вывоз газовых колонок</a></li>
-                                    <li><a href="#">Вывоз кондиционеров</a></li>
-                                    <li><a href="#">Вывоз металлических дверей</a></li>
-                                    <li><a href="#">Вывоз металлолома</a></li>
-                                    <li><a href="#">Вывоз утилизированных автомобилей</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Грузоперевозки</a>
-                                <ul>
-                                    <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                        <ul>
-                                            <li><a href="#">Услуга второго уровня 1</a></li>
-                                            <li><a href="#">Услуга второго уровня 2</a></li>
-                                            <li><a href="#">Услуга второго уровня 3</a></li>
-                                            <li><a href="#">Услуга второго уровня 4</a></li>
-                                            <li><a href="#">Услуга второго уровня 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Вывоз холодильников</a></li>
-                                    <li><a href="#">Вывоз стиральных машин</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Дополнительные услуги</a></li>
-                            <li><a href="#">Стоимость услуг</a></li>
-                        </ul>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu__grid">
+            <div class="mobile-menu__item mobile-menu__item--parent">
+                <a href="#">Каталог б/у техники <span class="mobile-menu__arrow"></span></a>
+                <div class="mobile-menu__childs">
+                    <div class="mobile-menu__child">
+                        <a href="#">Стиральные машины</a>
+                    </div>
+                    <div class="mobile-menu__child">
+                        <a href="#">Плиты</a>
+                    </div>
+                    <div class="mobile-menu__child">
+                        <a href="#">Холодильники</a>
                     </div>
                 </div>
             </div>
-
-            <div class="mobile-menu">
-                <ul class="mobile-menu__list">
-                    <li><a href="#">Автопарк</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
-                </ul>
-
-                <ul class="mobile-menu__list mobile-menu__catalog">
-                    <li><a href="#">Вывоз мусора</a></li>
-                    <li class="has-child"><a href="#">Бесплатный вывоз</a>
-                        <span class="mobile-menu__toggle"></span>
-                        <ul>
-                            <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                <span class="mobile-menu__toggle"></span>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                <span class="mobile-menu__toggle"></span>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Вывоз холодильников</a></li>
-                            <li><a href="#">Вывоз стиральных машин</a></li>
-                            <li><a href="#">Вывоз посудомоечных машин</a></li>
-                            <li><a href="#">Вывоз кухонных плит</a></li>
-                            <li><a href="#">Вывоз газовых колонок</a></li>
-                            <li><a href="#">Вывоз кондиционеров</a></li>
-                            <li><a href="#">Вывоз металлических дверей</a></li>
-                            <li><a href="#">Вывоз металлолома</a></li>
-                            <li><a href="#">Вывоз утилизированных автомобилей</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-child"><a href="#">Грузоперевозки</a>
-                        <span class="mobile-menu__toggle"></span>
-                        <ul>
-                            <li class="has-child"><a href="#">Вывоз чугунных ванн</a>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-child"><a href="#">Вывоз батарей отопления</a>
-                                <ul>
-                                    <li><a href="#">Услуга второго уровня 1</a></li>
-                                    <li><a href="#">Услуга второго уровня 2</a></li>
-                                    <li><a href="#">Услуга второго уровня 3</a></li>
-                                    <li><a href="#">Услуга второго уровня 4</a></li>
-                                    <li><a href="#">Услуга второго уровня 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Вывоз холодильников</a></li>
-                            <li><a href="#">Вывоз стиральных машин</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Дополнительные услуги</a></li>
-                    <li><a href="#">Стоимость услуг</a></li>
-                </ul>
-
+            <div class="mobile-menu__item">
+                <a href="#">О компании</a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#">Полезное</a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#">Доставка и оплата</a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#">Гарантии</a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#">Услуги</a>
+            </div>
+            <div class="mobile-menu__item">
+                <a href="#">Контакты</a>
             </div>
         </div>
     </div>
+</div>
 
 <div class="breadcrumbs">
     <div class="container">
         <div class="breadcrumbs__body">
             <ul>
-                <li><a href="#">Главная страница</a></li>
+                <li><a href="/menu.html">Главная страница</a></li>
                 <li><span>Контакты</span></li>
             </ul>
         </div>
     </div>
 </div>
 
+
 <div class="contacts">
     <div class="container">
-        <div class="contacts__body text">
-            <h1>Контакты</h1>
-        </div>
-        <div class="contacts__grid">
-            <div class="contacts__item">
-                <div class="contacts-panel">
-                    <div class="contacts-panel__name">
-                        <a href="tel:8 (812) 920-38-54">8 (812) 920-38-54</a>
-                    </div>
-                    <div class="contacts-panel__text">
-                        с 08.00 до 22.30
-                    </div>
-                </div>
-            </div>
-            <div class="contacts__item">
-                <div class="contacts-panel">
-                    <div class="contacts-panel__name">
-                        <a href="mailto:zakaz@hlamknam.ru">zakaz@hlamknam.ru</a>
-                    </div>
-                    <div class="contacts-panel__text">
-                        круглосуточно
-                    </div>
-                </div>
-            </div>
-            <div class="contacts__item">
-                <div class="contacts-panel">
-                    <div class="contacts-panel__name">
-                        8 (921) 920-38-54
-                    </div>
-                    <div class="contacts-panel__text">
-                        WhatsApp, Viber, Telegram
-                    </div>
-                </div>
-            </div>
-            <div class="contacts__item">
-                <div class="contacts-panel">
-                    <div class="contacts-panel__name">
-                        Наш офис:
-                    </div>
-                    <div class="contacts-panel__text">
-                        Санкт-Петербург, ул.<br /> Пулковская, д. 1
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h1>Наши контакты</h1>
+        <div class="contacts__body">
+            <div class="contacts__content">
+                <div class="contacts__grid">
 
-        <div class="contacts__map" id="map">
+                    <div class="contacts__item contacts__item--phone">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                <a href="tel:8 (812) 999-99-99">8 (812) 999-99-99</a>
+                            </div>
+                            <div class="contacts-panel__text">
+                                c 09.00 до 18.00
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
+                            </div>
+                            <div class="contacts-panel__text">
+                                для заявок, круглосуточно
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                Адрес офиса
+                            </div>
+                            <div class="contacts-panel__text">
+                                Санкт-Петербург,<br />
+                                Б.Сампсониевский пр., д. 82, офис 1
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__item">
+                        <div class="contacts-panel">
+                            <div class="contacts-panel__name">
+                                Реквизиты
+                            </div>
+                            <div class="contacts-panel__text">
+                                ООО “Название компании”<br />
+                                ИНН 78000000, КПП 7800000000<br />
+                                ОГРН 00000000000000
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contacts__map" id="map">
+                    <!--<img src="/assets/template/images/map.jpg" alt="">-->
+                </div>
+            </div>
+            <div class="contacts__form">
+
+                <div class="contacts-form">
+                    <div class="contacts-form__header">
+                        Если остались вопросы,<br />
+                        свяжитесь с нами
+                    </div>
+                    <form action="">
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Имя</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="name" placeholder="">
+                            </div>
+                        </div>
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Телефон</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="phone" placeholder="" data-mask="+7 (999) 999-99-99">
+                            </div>
+                        </div>
+                        <div class="contacts-form__item">
+                            <div class="contacts-form__label">Email*</div>
+                            <div class="contacts-form__input">
+                                <input type="text" name="email" placeholder="">
+                            </div>
+                        </div>
+                        <div class="contacts-form__comment">
+                            <div class="contacts-form__label">Сообщение</div>
+                            <div class="contacts-form__textarea">
+                                <textarea name="" id=""></textarea>
+                            </div>
+                        </div>
+                        <div class="contacts-form__button">
+                            <button class="btn">Отправить</button>
+                        </div>
+                        <div class="contacts-form__privacy">
+                            Нажимая на кнопку, Вы даете согласие на обработку персональных данных и соглашаюсь
+                            с <a href="">Политикой конфиденциальности</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
     </div>
 </div>
 
 
-<div class="feedback section-gray">
-    <div class="container">
-        <div class="feedback__body">
-            <div class="section-header">
-                Остались вопросы? <span class="section-header--desktop">Оставьте заявку и мы свяжемся с вами в ближайшее время!</span>
-                <span class="section-header--mobile">Закажите звонок и наш специалист перезвонит вам в течение 5 минут для бесплатной консультации!</span>
-            </div>
-            <div class="feedback-form">
-                <form action="">
-                    <div class="feedback-form__grid">
-                        <div class="feedback-form__left">
-                            <div class="feedback-form__group">
-                                <div class="feedback-form__item">
-                                    <input type="text" name="name" placeholder="Имя*" />
-                                </div>
-                                <div class="feedback-form__item">
-                                    <input type="text" name="name" placeholder="Телефон*" data-mask="+7 (999) 999-99-99" />
-                                </div>
-                            </div>
-                            <div class="feedback-form__textarea">
-                                <textarea name="message" placeholder="Сообщение"></textarea>
-                            </div>
-                        </div>
-                        <div class="feedback-form__right">
-                            <div class="feedback-form__button">
-                                <button class="btn btn-o">Заказать звонок</button>
-                            </div>
-                            <div class="feedback-form__bottom">
-                                <div class="feedback-form__police">
-                                    Нажимая на кнопку, вы даете согласие на обработку персональных данных в соответствии с
-                                    <a href="#">Политикой Конфиденциальности</a>
-                                </div>
-                                <div class="feedback-social">
-                                    <div class="feedback-social__text">
-                                        или свяжитесь с нами
-                                        в мессенджерах
-                                    </div>
-                                    <div class="feedback-social__icons">
-                                        <a href="#" class="feedback-social__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0)">
-                                                    <path class="svg-fill" d="M34.536 7.98c-.366-.448-.915-.695-1.545-.695-.343 0-.706.072-1.08.215L6.519 17.194c-1.348.514-1.53 1.286-1.518 1.7.012.414.237 1.175 1.611 1.612l.025.007 5.268 1.508 2.848 8.146c.389 1.11 1.26 1.8 2.276 1.8.64 0 1.27-.268 1.82-.775l3.259-3 4.726 3.805.001.001.045.036.013.01c.525.407 1.098.623 1.658.623 1.095 0 1.966-.81 2.22-2.064l4.16-20.545c.168-.825.028-1.563-.394-2.078zm-20.87 13.755l10.162-5.192-6.328 6.724a.877.877 0 00-.213.391l-1.22 4.943-2.401-6.866zm3.992 8.163a1.684 1.684 0 01-.127.105l1.132-4.584 2.06 1.658-3.065 2.821zM33.208 9.71l-4.16 20.546c-.04.196-.169.654-.498.654-.162 0-.366-.089-.575-.25l-5.355-4.311-.003-.002-3.186-2.566 9.15-9.724a.879.879 0 00-1.039-1.385l-15.05 7.69-5.34-1.528 25.387-9.69c.214-.083.364-.1.452-.1.053 0 .15.006.185.05.046.057.106.251.032.616z"/>
-                                                </g>
-                                                <path class="svg-stroke" stroke-width="2" d="M1 1h38v38H1z"/>
-                                                <defs><clipPath id="clip0"><path fill="#fff" d="M5 5h30v30H5z"/></clipPath></defs>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="feedback-social__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg">
-                                                <path class="svg-stroke" stroke-width="2" d="M1 1h38v38H1z"/>
-                                                <g clip-path="url(#clip0)">
-                                                    <path class="svg-fill" d="M20.181 29.375c4.34 0 2.793-2.747 3.128-3.538-.005-.59-.01-1.157.01-1.502.275.078.924.406 2.264 1.709 2.068 2.087 2.597 3.331 4.268 3.331h3.077c.975 0 1.482-.404 1.736-.742.245-.328.485-.903.222-1.798-.686-2.155-4.689-5.876-4.937-6.269a3.52 3.52 0 01.128-.218h-.002c.79-1.044 3.805-5.562 4.249-7.37a.023.023 0 00.002-.01c.24-.824.02-1.36-.207-1.662-.343-.452-.888-.681-1.624-.681h-3.076c-1.03 0-1.811.519-2.207 1.465-.66 1.681-2.518 5.139-3.91 6.363a80.036 80.036 0 01.008-4.042c.045-1.918.19-3.786-1.801-3.786h-4.835c-1.248 0-2.441 1.363-1.149 2.98 1.13 1.418.406 2.207.65 6.14-.95-1.019-2.64-3.77-3.835-7.286-.335-.951-.842-1.833-2.271-1.833H6.992c-1.247 0-1.992.68-1.992 1.819 0 2.557 5.661 16.93 15.181 16.93zM10.07 12.501c.271 0 .298 0 .5.572 1.223 3.603 3.968 8.936 5.973 8.936 1.507 0 1.507-1.544 1.507-2.125l-.002-4.628c-.082-1.531-.64-2.293-1.006-2.756l4.385.005c.003.021-.025 5.119.013 6.354 0 1.753 1.392 2.758 3.566.558 2.294-2.588 3.88-6.458 3.944-6.616.093-.225.175-.301.47-.301h3.089l-.003.011c-.281 1.313-3.058 5.495-3.986 6.794-.015.02-.029.041-.043.063-.409.667-.741 1.405.056 2.442h.002c.072.088.261.293.536.578.855.882 3.788 3.9 4.047 5.1-.172.027-.36.007-3.266.013-.618 0-1.102-.925-2.948-2.787-1.66-1.615-2.738-2.275-3.72-2.275-1.904 0-1.765 1.546-1.748 3.416.006 2.027-.006 1.386.008 1.514-.112.044-.43.131-1.262.131-7.931 0-13.096-12.589-13.295-14.995.069-.006 1.015-.003 3.183-.004z" />
-                                                </g>
-                                                <defs><clipPath id="clip0"><path fill="#fff" d="M5 5h30v30H5z"/></clipPath></defs>
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="feedback-social__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg">
-                                                <path class="svg-stroke" stroke-width="2" d="M1 1h38v38H1z"/>
-                                                <path class="svg-fill" d="M33.74 15.588c0-2.817-1.105-5.473-3.11-7.478A10.513 10.513 0 0023.151 5h-6.274A10.513 10.513 0 009.4 8.11a10.514 10.514 0 00-3.11 7.478v4.932c0 2.182.666 4.28 1.925 6.07a10.626 10.626 0 004.347 3.593v2.833c0 1.464.82 1.984 1.522 1.984.502 0 1.004-.248 1.492-.736l3.156-3.156h4.42c2.818 0 5.474-1.104 7.479-3.11a10.514 10.514 0 003.11-7.478v-4.932zM23.15 29.35h-4.784a.879.879 0 00-.621.258l-3.414 3.413-.013.013V29.596a.879.879 0 00-.566-.82c-3.413-1.303-5.706-4.62-5.706-8.256v-4.932c0-2.348.922-4.563 2.595-6.236a8.767 8.767 0 016.235-2.594h6.274c2.348 0 4.563.921 6.236 2.594a8.766 8.766 0 012.595 6.236v4.932c0 4.869-3.962 8.83-8.83 8.83z" />
-                                                <path class="svg-fill" d="M22.351 19.375a.879.879 0 00-1.242 0l-.71.71-2.752-2.751.71-.71a.88.88 0 000-1.243l-3.328-3.328a.879.879 0 00-1.243 0l-2.33 2.33a3.236 3.236 0 000 4.57l7.323 7.323a3.21 3.21 0 002.285.944 3.21 3.21 0 002.286-.944l2.33-2.33a.88.88 0 000-1.242l-3.329-3.329zm-.244 5.658c-.277.277-.647.43-1.043.43-.395 0-.766-.153-1.043-.43L12.7 17.711a1.476 1.476 0 010-2.085l1.709-1.71 2.085 2.087-.71.71a.879.879 0 000 1.242l3.994 3.994c.343.343.9.344 1.243 0l.71-.71 2.085 2.086-1.708 1.708zM20.227 8.888a.879.879 0 100 1.758 7.48 7.48 0 015.325 2.205 7.48 7.48 0 012.206 5.325.879.879 0 001.758 0 9.228 9.228 0 00-2.72-6.568 9.228 9.228 0 00-6.569-2.72z" />
-                                                <path class="svg-fill" d="M23.993 18.176a.88.88 0 001.758 0 5.53 5.53 0 00-5.524-5.522.879.879 0 100 1.757 3.77 3.77 0 013.766 3.765z" />
-                                            </svg>
-                                        </a>
-                                        <a href="#" class="feedback-social__icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg">
-                                                <path class="svg-stroke" stroke-width="2" d="M1 1h38v38H1z"/>
-                                                <g clip-path="url(#clip0)" class="svg-fill">
-                                                    <path d="M30.739 9.261A14.452 14.452 0 0020.452 5h-.002c-1.922 0-3.795.372-5.567 1.106a14.475 14.475 0 00-4.718 3.155 14.453 14.453 0 00-4.261 10.287c0 2.318.559 4.62 1.618 6.673l-2.445 6.985a1.337 1.337 0 00.319 1.398 1.336 1.336 0 001.398.32l6.986-2.446a14.592 14.592 0 006.672 1.619c3.886 0 7.539-1.514 10.287-4.262A14.453 14.453 0 0035 19.548c0-3.886-1.513-7.54-4.261-10.287zm-1.244 19.33a12.704 12.704 0 01-9.043 3.746c-2.09 0-4.166-.517-6.004-1.495a1.355 1.355 0 00-1.08-.084L7.02 32.98l2.221-6.346a1.356 1.356 0 00-.084-1.081 12.82 12.82 0 01-1.495-6.004c0-3.416 1.33-6.627 3.746-9.043A12.706 12.706 0 0120.45 6.76c3.417 0 6.628 1.33 9.044 3.746a12.704 12.704 0 013.746 9.043c0 3.416-1.33 6.628-3.746 9.043z"/>
-                                                    <path d="M25.858 20.848a1.719 1.719 0 00-2.427 0l-.732.732a10.654 10.654 0 01-4.28-4.28l.733-.731c.67-.67.67-1.758 0-2.428l-1.973-1.972a1.719 1.719 0 00-2.427 0l-1.578 1.578c-.904.904-.949 2.458-.127 4.375.714 1.666 2.02 3.496 3.677 5.153 1.658 1.658 3.488 2.964 5.153 3.678.912.39 1.74.585 2.457.585.79 0 1.445-.238 1.919-.712l1.578-1.578c.324-.324.503-.755.503-1.214 0-.458-.179-.89-.503-1.214l-1.973-1.972zm-.85 4.734c-.257.258-1.05.348-2.437-.246-1.465-.628-3.1-1.801-4.602-3.305-1.504-1.503-2.677-3.137-3.305-4.602-.594-1.386-.504-2.18-.246-2.438l1.548-1.548 1.912 1.912-.917.917a1.343 1.343 0 00-.248 1.563 12.412 12.412 0 005.452 5.452c.52.266 1.15.166 1.563-.248l.917-.917 1.911 1.912-1.547 1.548z"/>
-                                                </g>
-                                                <defs><clipPath id="clip0"><path fill="#fff" d="M5 5h30v30H5z"/></clipPath></defs>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="footer">
-    <div class="container phablet-container">
-        <div class="footer__grid footer__grid--desktop">
-            <div class="footer__logo">
-                <img src="/assets/template/images/logo-dark.png" alt="">
-            </div>
-            <div class="footer__slogan">
-                Вывоз мусора<br />
-                в Санкт-Петербурге<br />
-                и Ленинградской области
-            </div>
-            <div class="footer__phones">
-                <div class="footer-phone">
-                    <a href="tel:8 (812) 920-38-54">8 (812) 920-38-54</a>
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__left">
+                <div class="footer__logos">
+                    <div class="footer__logo">
+                        <img src="/assets/template/images/footer-logo.png" alt="">
+                    </div>
+                    <div class="footer__social">
+                        <a href="#" class="social-icon social-icon__instagram">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path d="M18.0954 8.26691C17.9804 7.95525 17.7969 7.67316 17.5585 7.4416C17.327 7.20319 17.045 7.0197 16.7332 6.90469C16.4803 6.80646 16.1003 6.68954 15.4005 6.65768C14.6435 6.62316 14.4165 6.61572 12.5 6.61572C10.5833 6.61572 10.3564 6.62297 9.59952 6.65749C8.89972 6.68954 8.51958 6.80646 8.26686 6.90469C7.95501 7.0197 7.67291 7.20319 7.44155 7.4416C7.20313 7.67316 7.01965 7.95506 6.90444 8.26691C6.80621 8.51983 6.68929 8.89996 6.65744 9.59977C6.62292 10.3566 6.61548 10.5836 6.61548 12.5003C6.61548 14.4168 6.62292 14.6438 6.65744 15.4008C6.68929 16.1006 6.80621 16.4805 6.90444 16.7334C7.01965 17.0453 7.20294 17.3272 7.44136 17.5588C7.67291 17.7972 7.95482 17.9807 8.26667 18.0957C8.51958 18.1941 8.89972 18.311 9.59952 18.3429C10.3564 18.3774 10.5831 18.3846 12.4998 18.3846C14.4167 18.3846 14.6437 18.3774 15.4003 18.3429C16.1001 18.311 16.4803 18.1941 16.7332 18.0957C17.3592 17.8542 17.854 17.3594 18.0954 16.7334C18.1937 16.4805 18.3106 16.1006 18.3426 15.4008C18.3771 14.6438 18.3844 14.4168 18.3844 12.5003C18.3844 10.5836 18.3771 10.3566 18.3426 9.59977C18.3108 8.89996 18.1938 8.51983 18.0954 8.26691ZM12.5 16.1858C10.4643 16.1858 8.81408 14.5358 8.81408 12.5001C8.81408 10.4644 10.4643 8.81432 12.5 8.81432C14.5356 8.81432 16.1858 10.4644 16.1858 12.5001C16.1858 14.5358 14.5356 16.1858 12.5 16.1858ZM16.3315 9.52996C15.8558 9.52996 15.4702 9.14429 15.4702 8.6686C15.4702 8.19291 15.8558 7.80724 16.3315 7.80724C16.8072 7.80724 17.1929 8.19291 17.1929 8.6686C17.1927 9.14429 16.8072 9.52996 16.3315 9.52996Z" fill="white" fill-opacity="0.8"/>
+                                    <path d="M14.8926 12.5C14.8926 13.8214 13.8214 14.8926 12.5 14.8926C11.1786 14.8926 10.1074 13.8214 10.1074 12.5C10.1074 11.1786 11.1786 10.1074 12.5 10.1074C13.8214 10.1074 14.8926 11.1786 14.8926 12.5Z" fill="white" fill-opacity="0.8"/>
+                                    <path d="M23.197 0H1.80302C0.80719 0 0 0.80719 0 1.80302V23.197C0 24.1928 0.80719 25 1.80302 25H23.197C24.1928 25 25 24.1928 25 23.197V1.80302C25 0.80719 24.1928 0 23.197 0V0ZM19.6344 15.4593C19.5997 16.2233 19.4782 16.745 19.3008 17.2016C18.928 18.1658 18.1658 18.928 17.2016 19.3008C16.7452 19.4782 16.2233 19.5995 15.4594 19.6344C14.694 19.6693 14.4495 19.6777 12.5002 19.6777C10.5507 19.6777 10.3064 19.6693 9.54075 19.6344C8.77686 19.5995 8.255 19.4782 7.79858 19.3008C7.31945 19.1206 6.88572 18.8381 6.52714 18.4729C6.16207 18.1145 5.87959 17.6805 5.69935 17.2016C5.52197 16.7452 5.40047 16.2233 5.36575 15.4594C5.33047 14.6938 5.32227 14.4493 5.32227 12.5C5.32227 10.5507 5.33047 10.3062 5.36556 9.54075C5.40028 8.77666 5.52158 8.255 5.69897 7.79839C5.87921 7.31945 6.16188 6.88553 6.52714 6.52714C6.88553 6.16188 7.31945 5.8794 7.79839 5.69916C8.255 5.52177 8.77666 5.40047 9.54075 5.36556C10.3062 5.33066 10.5507 5.32227 12.5 5.32227C14.4493 5.32227 14.6938 5.33066 15.4593 5.36575C16.2233 5.40047 16.745 5.52177 17.2016 5.69897C17.6805 5.87921 18.1145 6.16188 18.4731 6.52714C18.8381 6.88572 19.1208 7.31945 19.3008 7.79839C19.4784 8.255 19.5997 8.77666 19.6346 9.54075C19.6695 10.3062 19.6777 10.5507 19.6777 12.5C19.6777 14.4493 19.6695 14.6938 19.6344 15.4593Z" fill="white" fill-opacity="0.8"/>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon social-icon__vk">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.6702 0H1.32979C0.595213 0 0 0.595479 0 1.32979V23.6702C0 24.4045 0.595213 25 1.32979 25H23.6702C24.4048 25 25 24.4045 25 23.6702V1.32979C25 0.595479 24.4048 0 23.6702 0ZM19.912 14.0806C20.5933 14.7455 21.3138 15.3715 21.9258 16.1064C22.1965 16.4308 22.4519 16.766 22.6463 17.1433C22.9231 17.6816 22.6731 18.2729 22.1907 18.3045L19.1971 18.3037C18.4242 18.3673 17.8088 18.0561 17.2896 17.5277C16.8761 17.1061 16.4915 16.6561 16.0928 16.2207C15.9303 16.0418 15.758 15.8734 15.5543 15.7404C15.1463 15.4755 14.7918 15.5564 14.5574 15.9822C14.3191 16.4157 14.2641 16.8965 14.2423 17.3798C14.209 18.0859 13.9963 18.2702 13.288 18.3029C11.7747 18.3742 10.3383 18.1444 9.00399 17.3819C7.82606 16.709 6.91516 15.7585 6.12154 14.6835C4.57473 12.587 3.39016 10.2856 2.32633 7.91835C2.0867 7.38511 2.26197 7.09973 2.84947 7.08883C3.82713 7.06941 4.80452 7.07207 5.78085 7.08777C6.17872 7.09388 6.44175 7.32154 6.59415 7.69654C7.12207 8.99574 7.76995 10.2319 8.58112 11.3782C8.79734 11.6832 9.01808 11.9878 9.33191 12.2035C9.67872 12.4418 9.94308 12.3633 10.1066 11.9763C10.2112 11.7295 10.2564 11.4673 10.2787 11.2035C10.3564 10.3003 10.3657 9.39707 10.2316 8.49734C10.1479 7.93457 9.83085 7.57101 9.26968 7.46463C8.98404 7.41037 9.0258 7.30452 9.16463 7.14149C9.40558 6.85904 9.63271 6.68457 10.0838 6.68457L13.467 6.68404C14.0005 6.7883 14.1191 7.02766 14.1918 7.56463L14.1949 11.3234C14.1894 11.5314 14.2989 12.1473 14.6723 12.2835C14.971 12.3822 15.1691 12.1426 15.3479 11.9527C16.1585 11.0923 16.7362 10.0761 17.254 9.02473C17.4819 8.56117 17.6795 8.08085 17.871 7.60027C18.0128 7.24468 18.2346 7.06968 18.6356 7.07606L21.8926 7.07952C21.9883 7.07952 22.0864 7.08058 22.1814 7.09628C22.7298 7.19069 22.8801 7.42686 22.7106 7.9625C22.4436 8.80372 21.9237 9.50479 21.4152 10.2074C20.8718 10.9588 20.2918 11.6854 19.7524 12.4404C19.2582 13.133 19.2981 13.4808 19.912 14.0806Z" fill="#D7D7D7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-worktime">с 8.00 до 22.30</div>
-            </div>
-            <div class="footer__emails">
-                <div class="footer-email">
-                    <a href="mailto:zakaz@hlamknam.ru">zakaz@hlamknam.ru</a>
+                <div class="footer-contacts">
+                    <div class="footer-contacts__left">
+                        <div class="footer-contacts__email">
+                            <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
+                        </div>
+                        <div class="footer-contacts__email-hint">
+                            для заявок, круглосуточно
+                        </div>
+                    </div>
+                    <div class="footer-contacts__right">
+                        <div class="footer-contacts__phone">
+                            <a href="tel:8812999-99-99">8 (812) 999-99-99</a>
+                        </div>
+                        <div class="footer-contacts__phone-hint">
+                            c 9:00 до 18:00
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-email__hint">круглосуточно</div>
+                <div class="footer-req">
+                    <span>ООО Название</span>
+                    <span>ИНН 999999999  ОГРН 99999999999</span>
+                </div>
+                <div class="footer-address">
+                    Адрес: Санкт-Петербург, Б.Сампсониевский, д.82,офис 1
+                </div>
             </div>
-            <div class="footer__menu">
-                <ul class="footer-nav">
-                    <li><a href="#">Вывоз мусора</a></li>
+            <div class="footer__right">
+                <div class="footer__catalog-menu">
+                    <div class="footer__catalog-header">
+                        Каталог БУ техники
+                    </div>
+                    <ul>
+                        <li><a href="#">Стиральные машины</a></li>
+                        <li><a href="#">Холодильники</a></li>
+                        <li><a href="#">Плиты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__page-menu">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Полезное</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантии</a></li>
+                        <li><a href="#">Услуги</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-mobile">
+    <div class="container">
+        <div class="footer-mobile__grid">
+            <div class="footer-mobile__logo">
+                <img src="/assets/template/images/footer-logo.png" alt="">
+            </div>
+            <div class="footer-mobile__menu">
+                <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка и оплата</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">Гарантии</a></li>
+                    <li><a href="#">Контакты</a></li>
                     <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Автопарк</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="phablet-container__inside">
-            <div class="footer__grid footer__grid--mobile">
-                <div class="footer__logo">
-                    <img src="/assets/template/images/logo-dark.png" alt="">
-                </div>
-                <div class="footer__contacts">
-                    <div class="footer-phone">
-                        <a href="tel:8 (812) 920-38-54">8 (812) 920-38-54</a>
+            <div class="footer-mobile__contacts">
+                <div class="footer-mobile__contact">
+                    <div class="footer-mobile__phone">
+                        <a href="tel:8812999-99-99">8 (812) 999-99-99</a>
                     </div>
-                    <div class="footer-email">
-                        <a href="mailto:zakaz@hlamknam.ru">zakaz@hlamknam.ru</a>
+                    <div class="footer-mobile__email">
+                        <a href="mailto:zakaz@sitename.ru">zakaz@sitename.ru</a>
                     </div>
                 </div>
-                <div class="footer__worktimes">
-                    <div class="footer-worktime">с 8.00 до 22.30</div>
-                    <div class="footer-email__hint">круглосуточно</div>
+                <div class="footer-mobile__social">
+                    <a href="#" class="social-icon social-icon__instagram">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="M18.0954 8.26691C17.9804 7.95525 17.7969 7.67316 17.5585 7.4416C17.327 7.20319 17.045 7.0197 16.7332 6.90469C16.4803 6.80646 16.1003 6.68954 15.4005 6.65768C14.6435 6.62316 14.4165 6.61572 12.5 6.61572C10.5833 6.61572 10.3564 6.62297 9.59952 6.65749C8.89972 6.68954 8.51958 6.80646 8.26686 6.90469C7.95501 7.0197 7.67291 7.20319 7.44155 7.4416C7.20313 7.67316 7.01965 7.95506 6.90444 8.26691C6.80621 8.51983 6.68929 8.89996 6.65744 9.59977C6.62292 10.3566 6.61548 10.5836 6.61548 12.5003C6.61548 14.4168 6.62292 14.6438 6.65744 15.4008C6.68929 16.1006 6.80621 16.4805 6.90444 16.7334C7.01965 17.0453 7.20294 17.3272 7.44136 17.5588C7.67291 17.7972 7.95482 17.9807 8.26667 18.0957C8.51958 18.1941 8.89972 18.311 9.59952 18.3429C10.3564 18.3774 10.5831 18.3846 12.4998 18.3846C14.4167 18.3846 14.6437 18.3774 15.4003 18.3429C16.1001 18.311 16.4803 18.1941 16.7332 18.0957C17.3592 17.8542 17.854 17.3594 18.0954 16.7334C18.1937 16.4805 18.3106 16.1006 18.3426 15.4008C18.3771 14.6438 18.3844 14.4168 18.3844 12.5003C18.3844 10.5836 18.3771 10.3566 18.3426 9.59977C18.3108 8.89996 18.1938 8.51983 18.0954 8.26691ZM12.5 16.1858C10.4643 16.1858 8.81408 14.5358 8.81408 12.5001C8.81408 10.4644 10.4643 8.81432 12.5 8.81432C14.5356 8.81432 16.1858 10.4644 16.1858 12.5001C16.1858 14.5358 14.5356 16.1858 12.5 16.1858ZM16.3315 9.52996C15.8558 9.52996 15.4702 9.14429 15.4702 8.6686C15.4702 8.19291 15.8558 7.80724 16.3315 7.80724C16.8072 7.80724 17.1929 8.19291 17.1929 8.6686C17.1927 9.14429 16.8072 9.52996 16.3315 9.52996Z" fill="white" fill-opacity="0.8"/>
+                                <path d="M14.8926 12.5C14.8926 13.8214 13.8214 14.8926 12.5 14.8926C11.1786 14.8926 10.1074 13.8214 10.1074 12.5C10.1074 11.1786 11.1786 10.1074 12.5 10.1074C13.8214 10.1074 14.8926 11.1786 14.8926 12.5Z" fill="white" fill-opacity="0.8"/>
+                                <path d="M23.197 0H1.80302C0.80719 0 0 0.80719 0 1.80302V23.197C0 24.1928 0.80719 25 1.80302 25H23.197C24.1928 25 25 24.1928 25 23.197V1.80302C25 0.80719 24.1928 0 23.197 0V0ZM19.6344 15.4593C19.5997 16.2233 19.4782 16.745 19.3008 17.2016C18.928 18.1658 18.1658 18.928 17.2016 19.3008C16.7452 19.4782 16.2233 19.5995 15.4594 19.6344C14.694 19.6693 14.4495 19.6777 12.5002 19.6777C10.5507 19.6777 10.3064 19.6693 9.54075 19.6344C8.77686 19.5995 8.255 19.4782 7.79858 19.3008C7.31945 19.1206 6.88572 18.8381 6.52714 18.4729C6.16207 18.1145 5.87959 17.6805 5.69935 17.2016C5.52197 16.7452 5.40047 16.2233 5.36575 15.4594C5.33047 14.6938 5.32227 14.4493 5.32227 12.5C5.32227 10.5507 5.33047 10.3062 5.36556 9.54075C5.40028 8.77666 5.52158 8.255 5.69897 7.79839C5.87921 7.31945 6.16188 6.88553 6.52714 6.52714C6.88553 6.16188 7.31945 5.8794 7.79839 5.69916C8.255 5.52177 8.77666 5.40047 9.54075 5.36556C10.3062 5.33066 10.5507 5.32227 12.5 5.32227C14.4493 5.32227 14.6938 5.33066 15.4593 5.36575C16.2233 5.40047 16.745 5.52177 17.2016 5.69897C17.6805 5.87921 18.1145 6.16188 18.4731 6.52714C18.8381 6.88572 19.1208 7.31945 19.3008 7.79839C19.4784 8.255 19.5997 8.77666 19.6346 9.54075C19.6695 10.3062 19.6777 10.5507 19.6777 12.5C19.6777 14.4493 19.6695 14.6938 19.6344 15.4593Z" fill="white" fill-opacity="0.8"/>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon social-icon__vk">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.6702 0H1.32979C0.595213 0 0 0.595479 0 1.32979V23.6702C0 24.4045 0.595213 25 1.32979 25H23.6702C24.4048 25 25 24.4045 25 23.6702V1.32979C25 0.595479 24.4048 0 23.6702 0ZM19.912 14.0806C20.5933 14.7455 21.3138 15.3715 21.9258 16.1064C22.1965 16.4308 22.4519 16.766 22.6463 17.1433C22.9231 17.6816 22.6731 18.2729 22.1907 18.3045L19.1971 18.3037C18.4242 18.3673 17.8088 18.0561 17.2896 17.5277C16.8761 17.1061 16.4915 16.6561 16.0928 16.2207C15.9303 16.0418 15.758 15.8734 15.5543 15.7404C15.1463 15.4755 14.7918 15.5564 14.5574 15.9822C14.3191 16.4157 14.2641 16.8965 14.2423 17.3798C14.209 18.0859 13.9963 18.2702 13.288 18.3029C11.7747 18.3742 10.3383 18.1444 9.00399 17.3819C7.82606 16.709 6.91516 15.7585 6.12154 14.6835C4.57473 12.587 3.39016 10.2856 2.32633 7.91835C2.0867 7.38511 2.26197 7.09973 2.84947 7.08883C3.82713 7.06941 4.80452 7.07207 5.78085 7.08777C6.17872 7.09388 6.44175 7.32154 6.59415 7.69654C7.12207 8.99574 7.76995 10.2319 8.58112 11.3782C8.79734 11.6832 9.01808 11.9878 9.33191 12.2035C9.67872 12.4418 9.94308 12.3633 10.1066 11.9763C10.2112 11.7295 10.2564 11.4673 10.2787 11.2035C10.3564 10.3003 10.3657 9.39707 10.2316 8.49734C10.1479 7.93457 9.83085 7.57101 9.26968 7.46463C8.98404 7.41037 9.0258 7.30452 9.16463 7.14149C9.40558 6.85904 9.63271 6.68457 10.0838 6.68457L13.467 6.68404C14.0005 6.7883 14.1191 7.02766 14.1918 7.56463L14.1949 11.3234C14.1894 11.5314 14.2989 12.1473 14.6723 12.2835C14.971 12.3822 15.1691 12.1426 15.3479 11.9527C16.1585 11.0923 16.7362 10.0761 17.254 9.02473C17.4819 8.56117 17.6795 8.08085 17.871 7.60027C18.0128 7.24468 18.2346 7.06968 18.6356 7.07606L21.8926 7.07952C21.9883 7.07952 22.0864 7.08058 22.1814 7.09628C22.7298 7.19069 22.8801 7.42686 22.7106 7.9625C22.4436 8.80372 21.9237 9.50479 21.4152 10.2074C20.8718 10.9588 20.2918 11.6854 19.7524 12.4404C19.2582 13.133 19.2981 13.4808 19.912 14.0806Z" fill="#D7D7D7"/>
+                        </svg>
+                    </a>
                 </div>
-            </div>
-        </div>
-        <div class="phablet-container__inside footer-menu__box">
-            <div class="footer-menu">
-                <ul class="footer-menu__left">
-                    <li><a href="#">Вывоз мусора</a></li>
-                    <li><a href="#">Бесплатный вывоз</a></li>
-                    <li><a href="#">Грузоперевозки</a></li>
-                    <li><a href="#">Дополнительные услуги</a></li>
-                    <li><a href="#">Стоимость услуг</a></li>
-                </ul>
-                <ul class="footer-menu__right">
-                    <li><a href="#">Автопарк</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Сотрудничество</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Купить б/у бытовую технику</a></li>
-                </ul>
             </div>
         </div>
     </div>
 </div>
 
 <div class="bottom-line">
-    <div class="container phablet-container">
+    <div class="container">
         <div class="bottom-line__grid">
-            <div class="bottom-line__left">
-                <ul class="bottom-line__nav">
-                    <li>Все права защищены 2010 - 2020</li>
-                    <li><a href="#">Карта сайта</a></li>
-                    <li><a href="#">Политика конфиденциальности</a></li>
-                </ul>
+            <div class="bottom-line__copyright">
+                Все права защищены 2020
             </div>
-            <div class="bottom-line__right">
-                <div class="bottom-line__dev">
-                    Разработка сайта: <a href="#">Creative-Lab</a>
-                </div>
+            <div class="bottom-line__menu">
+                <a href="#">Политика конфиденциальности </a>
             </div>
-        </div>
-    </div>
-</div>
-<div class="bottom-line-mobile">
-    <div class="container">
-        <div class="bottom-line-mobile__left">
-            Все права защищены 2010 - 2020
-            <ul class="bottom-line-mobile__nav">
-                <li><a href="#">Политика конфиденциальности</a></li>
-                <li><a href="#">Карта сайта</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="bottom-line-mobile bottom-line-mobile--gray">
-    <div class="container">
-        <div class="bottom-line-mobile__right">
-            <div class="bottom-line-mobile__dev">
-                Разработка сайта: <a href="#">Creative-Lab</a>
+            <div class="bottom-line__dev">
+                Разработка сайта - <a href="#">Creative-Lab</a>
             </div>
         </div>
     </div>
 </div>
 
-<div style="display: none">
-
-    <div id="callback" class="popup-form">
-        <div class="section-header">Обратный звонок</div>
-        <div class="popup-form__item">
-            <input type="text" name="name" placeholder="Имя*">
-        </div>
-        <div class="popup-form__item">
-            <input type="text" name="phone" placeholder="Телефон*" data-mask="+7 (999) 999-99-99">
-        </div>
-        <div class="popup-form__item">
-            <select name="service" class="styler-popup-form" placeholder="Время звонка">
-                <option>с 10:00 до 12:00</option>
-                <option>с 12:00 до 16:00</option>
-                <option>с 16:00 до 21:00</option>
-            </select>
-        </div>
-        <div class="popup-form__item">
-            <button class="btn btn-o">Заказать звонок</button>
-        </div>
-        <div class="popup-form__police">
-            Нажимая на кнопку, вы даете согласие на обработку персональных данных в
-            соответствии с <a href="#">Политикой Конфиденциальности</a>
-        </div>
-    </div>
-
-    <div id="order" class="popup-form">
-        <div class="section-header">
-            Заказать
-            <div class="section-header__subheader">
-                квартирный переезд
-            </div>
-        </div>
-        <div class="popup-form__item">
-            <input type="text" name="name" placeholder="Имя*">
-        </div>
-        <div class="popup-form__item">
-            <input type="text" name="phone" placeholder="Телефон*" data-mask="+7 (999) 999-99-99">
-        </div>
-        <div class="popup-form__item">
-            <button class="btn btn-o">Заказать</button>
-        </div>
-        <div class="popup-form__police">
-            Нажимая на кнопку, вы даете согласие на обработку персональных данных в
-            соответствии с <a href="#">Политикой Конфиденциальности</a>
-        </div>
-    </div>
-
-    <div id="success" class="popup-form">
-        <div class="section-header">
-            Ваша заявка принята
-        </div>
-        <div class="popup-form__item">
-            <div class="success-text">
-                Наш специалист свяжется с вами в течение 5 минут (в рабочее время)
-                для бесплатной консультации.
-            </div>
-        </div>
-    </div>
-
-    <div id="quiz" class="quiz-panel popup-form" data-quiz-step="1">
-        <div class="section-header">Скидка 5 % на вывоз мусора</div>
-        <div class="quiz-panel__text">
-            Чтобы получить скидку, ответьте на несколько простых вопросов и введите свои контактные данные.
-        </div>
-        <div class="quiz-panel__nav">
-            <a href="#" data-quiz-index="1"></a>
-            <a href="#" data-quiz-index="2"></a>
-            <a href="#" data-quiz-index="3"></a>
-            <a href="#" data-quiz-index="4"></a>
-            <a href="#" data-quiz-index="5"></a>
-        </div>
-        <form action="">
-            <div class="quiz-panel__tabs">
-                <div class="quiz-panel__tab active" data-quiz-tab="1">
-                    <div class="quiz-panel__question">
-                        Какой объем мусора требуется вывезти?
-                    </div>
-                    <div class="quiz-panel__answers">
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> До 10 м3</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Больше 10 м3</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Не могу точно сказать</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-panel__tab" data-quiz-tab="2">
-                    <div class="quiz-panel__question">
-                        Второй вопрос
-                    </div>
-                    <div class="quiz-panel__answers">
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> 1111</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> 22222</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> 3333</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-panel__tab" data-quiz-tab="3">
-                    <div class="quiz-panel__question">
-                        Третий вопрос
-                    </div>
-                    <div class="quiz-panel__answers">
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Ответ 1 на третий</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Ответ 2 на третий</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Ответ 3 на третий</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-panel__tab" data-quiz-tab="4">
-                    <div class="quiz-panel__question">
-                        Какой объем мусора требуется вывезти?
-                    </div>
-                    <div class="quiz-panel__answers">
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> До 10 м3</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Больше 10 м3</label>
-                        </div>
-                        <div class="quiz-panel__input">
-                            <label><input type="checkbox" class="checkbox-styler" /> Не могу точно сказать</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="quiz-panel__tab" data-quiz-tab="5">
-                    <div class="popup-form__item">
-                        <input type="text" name="name" placeholder="Имя*">
-                    </div>
-                    <div class="popup-form__item">
-                        <input type="text" name="phone" placeholder="Телефон*" data-mask="+7 (999) 999-99-99">
-                    </div>
-                    <div class="popup-form__item">
-                        <select name="service" class="styler-popup-form" placeholder="Время звонка">
-                            <option>с 10:00 до 12:00</option>
-                            <option>с 12:00 до 16:00</option>
-                            <option>с 16:00 до 21:00</option>
-                        </select>
-                    </div>
-                    <div class="popup-form__item popup-form__button">
-                        <button class="btn btn-o">Заказать со скидкой</button>
-                    </div>
-                    <div class="popup-form__police">
-                        Нажимая на кнопку, вы даете согласие на обработку персональных данных в
-                        соответствии с <a href="#">Политикой Конфиденциальности</a>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <div class="quiz-panel__controls">
-            <a href="#" class="btn btn-o" data-quiz-nav="prev">Назад</a>
-            <a href="#" class="btn btn-o" data-quiz-nav="next">Вперед</a>
-        </div>
-    </div>
-
-</div>
+<a class="goto-top" href="#top">
+    <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.0883 14.6106L12.4938 0.439631C12.2883 0.188417 11.9541 0.188417 11.7486 0.439631L0.154154 14.6106C-0.0513845 14.8619 -0.0513845 15.2703 0.154154 15.5215C0.359692 15.7727 0.693839 15.7727 0.899377 15.5215L12.1207 1.80524L23.342 15.5215C23.4453 15.6464 23.5802 15.7096 23.7151 15.7096C23.8501 15.7096 23.985 15.6465 24.0883 15.5215C24.2938 15.2703 24.2938 14.8619 24.0883 14.6106Z" fill="white"/>
+    </svg>
+</a>
 
 <script src="/assets/template/js/all.js?v=2"></script>
 </body>
@@ -673,11 +397,12 @@
 <script>
     var mapData = [{
         id: 'map',
-        coords: [59.841220, 30.347731],
-        header: 'Санкт-Петербург, ул. Пулковская, д. 1',
-        center: [59.841220, 30.347731],
+        coords: [59.985399, 30.334481],
+        header: 'Санкт-Петербург, Б.Сампсониевский пр., д. 82, офис 1 ',
+        center: [59.985399, 30.334481],
         zoom: 16,
     }];
 </script>
 <script src="/assets/template/js/map-contacts.js?v=1"></script>
+
 
