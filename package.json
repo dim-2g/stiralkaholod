@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "imagemin-jpeg-recompress": "^6.0.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   },
   "browserslist": [
     "last 1 version",
